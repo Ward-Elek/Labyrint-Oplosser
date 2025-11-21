@@ -30,6 +30,8 @@ class Agent:
         self.gamma = gamma
         self.lrn_rate = lrn_rate
         self.path = []
+        self.episode_traces = []
+        self.q_snapshots = []
 
     def set_rewards(self, maze, feasibility):
         # Find the penultimate cell to set the highest reward for reaching the end of the maze:
@@ -40,10 +42,29 @@ class Agent:
         # Set the highest reward for reaching the end of the maze:
         self.R[previous, self.goal] = 1000.0
 
-    def train(self, F, max_epochs):
+    def train(self, F, max_epochs, record_episodes=False, record_q_values=False):
+        """Train the agent using Q-learning.
+
+        Parameters
+        ----------
+        F: np.ndarray
+            The feasibility matrix for the maze.
+        max_epochs: int
+            Number of training episodes.
+        record_episodes: bool
+            Whether to capture the sequence of visited states for each episode.
+        record_q_values: bool
+            Whether to store a deep copy of the Q matrix after every episode.
+            Ignored unless ``record_episodes`` is True.
+        """
+
+        self.episode_traces = []
+        self.q_snapshots = [] if record_q_values else None
+
         # Compute the Q matrix
         for _ in range(0, max_epochs):
             curr_state = np.random.randint(0, self.n_states)  # random start state
+            episode_states = [curr_state] if record_episodes else None
 
             while True:
                 next_state = get_random_next_state(curr_state, F, self.n_states)
@@ -62,8 +83,19 @@ class Agent:
                 )
 
                 curr_state = next_state
+                if record_episodes:
+                    episode_states.append(curr_state)
                 if curr_state == self.goal:
                     break
+
+            if record_episodes:
+                episode_record = {"states": episode_states}
+                if record_q_values:
+                    snapshot = np.copy(self.Q)
+                    episode_record["q"] = snapshot
+                    self.q_snapshots.append(snapshot)
+
+                self.episode_traces.append(episode_record)
 
     def walk(self, maze, feasibility):
         # Walk to the goal from start using Q matrix.
