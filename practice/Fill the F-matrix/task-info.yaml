@@ -1,0 +1,45 @@
+type: edu
+files:
+  - name: convert.py
+    visible: true
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: cell.py
+    visible: true
+    learner_created: false
+  - name: draw.py
+    visible: true
+    learner_created: false
+  - name: learn.py
+    visible: false
+    learner_created: false
+  - name: main.py
+    visible: true
+    learner_created: false
+  - name: maze.py
+    visible: true
+    learner_created: false
+  - name: tests/test_task.py
+    visible: false
+    learner_created: false
+  - name: tests/__init__.py
+    visible: false
+    learner_created: false
+  - name: feasibility.png
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: maze_example.png
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: final_run.py
+    visible: false
+    learner_created: false
+status: Failed
+feedback:
+  message: Error
+  time: "Fri, 21 Nov 2025 09:06:22 UTC"
+record: 4

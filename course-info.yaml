@@ -1,0 +1,23 @@
+type: marketplace
+title: Reinforcement Learning Maze Solver
+language: English
+summary: "<p>This is an introductory Reinforcement Learning tutorial by JetBrains\
+  \ Academy demonstrating the approach on a simple task of solving a labyrinth.</p>\
+  \ \n<p>You will implement a simple Q-learning algorithm that uses rewards and penalties\
+  \ and an iteratively updated Q-table to teach a learning agent find the shortest\
+  \ path through a 2D maze.  You will get acquainted with the key concepts of RL and\
+  \ learn what kinds of problems such algorithms can be applied to and what limitations\
+  \ they carry.</p> \n<p>The course includes building a dynamic visualization of the\
+  \ agent moving through the maze.</p>\n"
+programming_language: Python
+environment: unittest
+content:
+  - About
+  - Theory
+  - practice
+additional_files:
+  - name: LICENSE
+  - name: requirements.txt
+mode: Study
+feedback_link: https://plugins.jetbrains.com/plugin/21188-reinforcement-learning-maze-solver/reviews
+yaml_version: 5

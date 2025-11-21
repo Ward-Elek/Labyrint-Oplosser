@@ -1,0 +1,44 @@
+type: theory
+files:
+  - name: final_run.py
+    visible: true
+    learner_created: false
+  - name: main.py
+    visible: true
+    learner_created: false
+  - name: __init__.py
+    visible: false
+    learner_created: false
+  - name: cell.py
+    visible: true
+    learner_created: false
+  - name: convert.py
+    visible: true
+    learner_created: false
+  - name: draw.py
+    visible: true
+    learner_created: false
+  - name: learn.py
+    visible: true
+    learner_created: false
+  - name: maze.py
+    visible: true
+    learner_created: false
+  - name: feasibility.png
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: maze_example.png
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: runConfigurations/final_run_visualization.run.xml
+    visible: false
+    learner_created: false
+  - name: maze.png
+    visible: true
+    is_binary: true
+    learner_created: true
+status: Solved
+record: 12
+post_submission_on_open: true
