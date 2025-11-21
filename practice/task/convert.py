@@ -9,8 +9,8 @@ class Feasibility:
         self.get_neighbors(maze_)
 
     def get_neighbors(self, maze):
-        for cell_num in np.nditer(self.numbered_grid, flags=['multi_index']):
-            curr_cell = maze.maze_grid[cell_num.multi_index]
+        for (x_idx, y_idx), cell_num in np.ndenumerate(self.numbered_grid):
+            curr_cell = maze.maze_grid[x_idx, y_idx]
             reachable = find_reachable_neighbors(maze, curr_cell)
             for neighbor in reachable:
                 neighbor_num = self.numbered_grid[neighbor.x, neighbor.y]

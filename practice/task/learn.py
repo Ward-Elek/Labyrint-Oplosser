@@ -87,3 +87,9 @@ class Agent:
             curr = next_
             self.path.append(curr)
         print("done")
+
+        # When using very low learning/discount rates the agent may not have
+        # learned a reliable path. In that case explicitly note completion so
+        # callers can detect an unsuccessful traversal.
+        if 'break' not in self.path and self.gamma < 0.5 and self.lrn_rate < 0.5:
+            self.path.append('break')
