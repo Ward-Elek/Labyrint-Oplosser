@@ -42,7 +42,7 @@ class Agent:
 
     def train(self, F, max_epochs):
         # Compute the Q matrix
-        for i in range(0, max_epochs):
+        for _ in range(0, max_epochs):
             curr_state = np.random.randint(0, self.n_states)  # random start state
 
             while True:
@@ -58,7 +58,8 @@ class Agent:
                 # Bellman's equation: Q = [(1 - alpha) * Q]  +  [alpha * (reward + (gamma * maxQ))]
                 # Update the Q matrix
                 self.Q[curr_state][next_state] = ((1 - self.lrn_rate) * self.Q[curr_state][next_state]) + (
-                        self.lrn_rate * (self.R[curr_state][next_state] + (self.gamma * max_Q)))
+                    self.lrn_rate * (self.R[curr_state][next_state] + (self.gamma * max_Q))
+                )
 
                 curr_state = next_state
                 if curr_state == self.goal:
@@ -70,26 +71,36 @@ class Agent:
         self.path.append(curr)
         print(str(curr) + "->", end="")
         while curr != self.goal:
-            curr_position = np.where(feasibility.numbered_grid == curr)
-            curr_cell = maze.maze_grid[curr_position[0], curr_position[1]][0]
-
-            next_ = np.argmax(self.Q[curr])
-            next_position = np.where(feasibility.numbered_grid == next_)
-            next_cell = maze.maze_grid[next_position[0], next_position[1]][0]
-
-            reachable_neighbors = find_reachable_neighbors(maze, curr_cell)
-            if next_cell not in reachable_neighbors:
-                self.path.append('break')
+            # Restrict candidate actions to feasible transitions from the current
+            # state to avoid picking unreachable cells when Q-values are tied.
+            poss_next_states = get_possible_next_states(curr, feasibility.F_matrix, self.n_states)
+            if not poss_next_states:
+                self.path.append("break")
                 print("break", end="")
                 break
 
-            print(str(next_) + "->", end="")
-            curr = next_
+            q_values = self.Q[curr, poss_next_states]
+            best_index = int(np.argmax(q_values))
+            next_state = poss_next_states[best_index]
+
+            curr_position = np.where(feasibility.numbered_grid == curr)
+            curr_cell = maze.maze_grid[curr_position[0], curr_position[1]][0]
+            reachable_neighbors = find_reachable_neighbors(maze, curr_cell)
+
+            next_position = np.where(feasibility.numbered_grid == next_state)
+            next_cell = maze.maze_grid[next_position[0], next_position[1]][0]
+            if next_cell not in reachable_neighbors:
+                self.path.append("break")
+                print("break", end="")
+                break
+
+            print(str(next_state) + "->", end="")
+            curr = next_state
             self.path.append(curr)
         print("done")
 
         # When using very low learning/discount rates the agent may not have
         # learned a reliable path. In that case explicitly note completion so
         # callers can detect an unsuccessful traversal.
-        if 'break' not in self.path and self.gamma < 0.5 and self.lrn_rate < 0.5:
-            self.path.append('break')
+        if "break" not in self.path and self.gamma < 0.5 and self.lrn_rate < 0.5:
+            self.path.append("break")
