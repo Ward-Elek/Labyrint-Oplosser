@@ -1,7 +1,7 @@
 from maze import Maze
 from convert import Feasibility
 from learn import Agent
-from draw import make_movie, PathNotFound
+from draw import make_movie, make_training_movie, PathNotFound
 import pandas as pd
 
 
@@ -61,6 +61,12 @@ if __name__ == "__main__":
 
     max_epochs = 1000
 
+    # Ask whether to record episode traces for a training animation. Enabled by
+    # default so users see the full learning process unless they explicitly
+    # opt out to save memory.
+    record_choice = input('Record training episodes for animation? [Y/n]: ').strip().lower()
+    record_episodes = False if record_choice == 'n' else True
+
     # Create the Maze
     maze = Maze(dimension1, dimension2, [start_x, start_y])
 
@@ -75,7 +81,7 @@ if __name__ == "__main__":
     my_print(feasibility.F_matrix)
 
     # Train the model:
-    agent.train(feasibility.F_matrix, max_epochs)
+    agent.train(feasibility.F_matrix, max_epochs, record_episodes=record_episodes)
     # train(feasibility.F_matrix, R_matrix, Q_matrix, gamma, lrn_rate, goal, n_states, max_epochs)
     print("Done ")
 
@@ -91,3 +97,10 @@ if __name__ == "__main__":
         print("Saved visualization to maze_path.gif")
     except PathNotFound as err:
         print(err)
+
+    if record_episodes and agent.episode_traces:
+        try:
+            make_training_movie(maze, feasibility, agent.episode_traces, final_path=agent.path)
+            print("Saved training animation to training_progress.gif")
+        except (PathNotFound, ValueError) as err:
+            print(err)
