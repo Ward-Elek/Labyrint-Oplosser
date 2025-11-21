@@ -64,13 +64,25 @@ class Agent:
                 if curr_state == self.goal:
                     break
 
-    def walk(self):
+    def walk(self, maze, feasibility):
         # Walk to the goal from start using Q matrix.
         curr = self.start
         self.path.append(curr)
         print(str(curr) + "->", end="")
         while curr != self.goal:
+            curr_position = np.where(feasibility.numbered_grid == curr)
+            curr_cell = maze.maze_grid[curr_position[0], curr_position[1]][0]
+
             next_ = np.argmax(self.Q[curr])
+            next_position = np.where(feasibility.numbered_grid == next_)
+            next_cell = maze.maze_grid[next_position[0], next_position[1]][0]
+
+            reachable_neighbors = find_reachable_neighbors(maze, curr_cell)
+            if next_cell not in reachable_neighbors:
+                self.path.append('break')
+                print("break", end="")
+                break
+
             print(str(next_) + "->", end="")
             curr = next_
             self.path.append(curr)
