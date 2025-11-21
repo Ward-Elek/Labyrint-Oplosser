@@ -10,6 +10,13 @@ class Maze:
              'E': (1, 0)}
 
     def __init__(self, nx, ny, start_):
+        if nx <= 0 or ny <= 0:
+            raise ValueError("Maze dimensions must be positive integers.")
+        if not isinstance(start_, (list, tuple)) or len(start_) != 2:
+            raise ValueError("Start coordinates must be a list or tuple with two integers.")
+        if not (0 <= start_[0] < nx and 0 <= start_[1] < ny):
+            raise ValueError("Start coordinates should be inside the maze bounds.")
+
         self.end = None
         self.nx, self.ny = nx, ny
         self.maze_grid = np.array([[Cell(x, y) for y in range(ny)] for x in range(nx)])
