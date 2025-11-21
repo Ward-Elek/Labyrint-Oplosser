@@ -1,5 +1,5 @@
 from maze import Maze
-#from convert import Feasibility
+from convert import Feasibility
 from draw import draw_maze
 import pandas as pd
 
