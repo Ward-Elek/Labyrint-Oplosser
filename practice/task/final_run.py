@@ -1,6 +1,7 @@
 from maze import Maze
 from convert import Feasibility
 from learn import Agent
+from draw import make_movie, PathNotFound
 import pandas as pd
 
 
@@ -84,3 +85,9 @@ if __name__ == "__main__":
     print(f"Using Q to go from start to goal ({agent.goal})")
 
     agent.walk(maze, feasibility)
+
+    try:
+        make_movie(maze, feasibility, agent.path)
+        print("Saved visualization to maze_path.gif")
+    except PathNotFound as err:
+        print(err)
