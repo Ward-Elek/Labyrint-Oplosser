@@ -12,6 +12,7 @@ import numpy as np
 import pygame
 from PIL import Image, ImageDraw
 
+from callback_protocol import RESET_SIGNAL
 from draw import cell_side, draw_image, line_thickness, margin
 
 
@@ -22,7 +23,7 @@ class LiveMazeViewer:
         self.maze = maze
         self.feasibility = feasibility
         self.title = title
-        self.update_queue: "queue.Queue[int]" = queue.Queue()
+        self.update_queue: "queue.Queue[object]" = queue.Queue()
         self.current_state: Optional[int] = None
         self.running = False
         self.screen = None
@@ -92,10 +93,24 @@ class LiveMazeViewer:
                 return cell
         return None
 
-    def enqueue_state(self, state: int):
-        """Add a new state update to the rendering queue."""
+    def enqueue_state(self, state):
+        """Add a new state update (or control signal) to the rendering queue."""
 
         self.update_queue.put(state)
+
+    def reset_trail(self, clear_surface: bool = False):
+        """Clear the stored trail between episodes.
+
+        Parameters
+        ----------
+        clear_surface: bool
+            When True, removes any previously drawn trail markers.
+        """
+
+        self.previous_cell = None
+        self.current_state = None
+        if clear_surface and self.trail_surface:
+            self.trail_surface.fill((0, 0, 0, 0))
 
     def set_solved_path(self, path_states):
         """Store the solved path states for later rendering.
@@ -121,6 +136,10 @@ class LiveMazeViewer:
                 state = self.update_queue.get_nowait()
             except queue.Empty:
                 break
+
+            if state == RESET_SIGNAL:
+                self.reset_trail()
+                continue
 
             self.current_state = state
             cell = self._state_to_cell(state)
