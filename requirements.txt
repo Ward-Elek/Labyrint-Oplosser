@@ -1,4 +1,5 @@
 numpy
 pandas
 pillow
+pygame
 wrapt_timeout_decorator
