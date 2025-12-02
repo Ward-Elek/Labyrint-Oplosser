@@ -62,7 +62,35 @@ class LiveMazeViewer:
         img = Image.new("RGB", (self.base_width, self.base_height), (255, 255, 255))
         drawer = ImageDraw.Draw(img)
         draw_image(drawer, self.maze.maze_grid)
+        self._highlight_start_and_end(drawer)
         return pygame.image.fromstring(img.tobytes(), img.size, img.mode)
+
+    def _highlight_start_and_end(self, drawer: ImageDraw.ImageDraw):
+        padding = line_thickness
+        for cell, color in (
+            (self._find_cell_with_status("Start"), (0, 255, 0)),
+            (self._find_cell_with_status("End"), (255, 0, 0)),
+        ):
+            if cell is None:
+                continue
+
+            center_x, center_y = self._cell_center(cell)
+            half_side = cell_side / 2
+            drawer.rectangle(
+                (
+                    center_x - half_side + padding,
+                    center_y - half_side + padding,
+                    center_x + half_side - padding,
+                    center_y + half_side - padding,
+                ),
+                fill=color,
+            )
+
+    def _find_cell_with_status(self, status: str):
+        for cell in self.maze.maze_grid.flatten():
+            if getattr(cell, "status", None) == status:
+                return cell
+        return None
 
     def enqueue_state(self, state: int):
         """Add a new state update to the rendering queue."""
