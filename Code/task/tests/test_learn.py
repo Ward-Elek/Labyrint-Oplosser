@@ -32,20 +32,44 @@ class TestAgent:
         self.path = []
 
     def set_rewards(self, maze, feasibility):
-        # Find the penultimate cell to set the highest reward for reaching the end of the maze:
-        previous = find_reachable_neighbors(maze, maze.maze_grid[maze.end[0]][maze.end[1]])[0]
-        prev_index = np.where(maze.maze_grid == previous)
-        previous = feasibility.numbered_grid[prev_index[0], prev_index[1]][0]
-        self.R = np.where(self.R == 1, -0.1, self.R)
-        # Set the highest reward for reaching the end of the maze:
-        self.R[previous, self.goal] = 1000.0
+        step_cost = 0.1
+        goal_reward = 1000.0
+        density_scale = 1.0
+
+        rewards = np.zeros_like(self.R, dtype=np.float32)
+        goal_x, goal_y = maze.end
+
+        for (x_idx, y_idx), state_idx in np.ndenumerate(feasibility.numbered_grid):
+            curr_cell = maze.maze_grid[x_idx, y_idx]
+            curr_distance = abs(goal_x - x_idx) + abs(goal_y - y_idx)
+            reachable_neighbors = find_reachable_neighbors(maze, curr_cell)
+
+            for neighbor in reachable_neighbors:
+                neighbor_idx = feasibility.numbered_grid[neighbor.x, neighbor.y]
+                neighbor_distance = abs(goal_x - neighbor.x) + abs(goal_y - neighbor.y)
+
+                if neighbor_idx == self.goal:
+                    reward = goal_reward
+                else:
+                    shaping = density_scale * (curr_distance - neighbor_distance)
+                    reward = -step_cost + shaping
+
+                rewards[state_idx, neighbor_idx] = reward
+
+        self.R = rewards
 
     def train(self, F, max_epochs):
         # Compute the Q matrix
         for i in range(0, max_epochs):
             curr_state = np.random.randint(0, self.n_states)  # random start state
 
+            step_count = 0
+            step_limit = self.n_states * 4
+
             while True:
+                if step_count >= step_limit:
+                    break
+
                 next_state = get_rnd_next_state(curr_state, F, self.n_states)
                 poss_next_next_states = get_poss_next_states(next_state, F, self.n_states)
 
@@ -60,6 +84,7 @@ class TestAgent:
                 self.Q[curr_state][next_state] = ((1 - self.lrn_rate) * self.Q[curr_state][next_state]) + (
                         self.lrn_rate * (self.R[curr_state][next_state] + (self.gamma * max_Q)))
 
+                step_count += 1
                 curr_state = next_state
                 if curr_state == self.goal:
                     break
@@ -68,8 +93,10 @@ class TestAgent:
         # Walk to the goal from start using Q matrix.
         curr = self.start
         self.path.append(curr)
+        step_limit = self.n_states * 4
+        steps = 0
         # print(str(curr) + "->", end="")
-        while curr != self.goal:
+        while curr != self.goal and steps < step_limit:
             curr_position = np.where(feasibility.numbered_grid == curr)
             curr_cell = maze.maze_grid[curr_position[0], curr_position[1]][0]
 
@@ -86,4 +113,5 @@ class TestAgent:
             # print(str(next_) + "->", end="")
             curr = next_
             self.path.append(curr)
+            steps += 1
         # print("done")

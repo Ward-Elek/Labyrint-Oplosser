@@ -35,13 +35,31 @@ class Agent:
         self.q_snapshots = []
 
     def set_rewards(self, maze, feasibility):
-        # Find the penultimate cell to set the highest reward for reaching the end of the maze:
-        previous = find_reachable_neighbors(maze, maze.maze_grid[maze.end[0]][maze.end[1]])[0]
-        prev_index = np.where(maze.maze_grid == previous)
-        previous = feasibility.numbered_grid[prev_index[0], prev_index[1]][0]
-        self.R = np.where(self.R == 1, -0.1, self.R)
-        # Set the highest reward for reaching the end of the maze:
-        self.R[previous, self.goal] = 1000.0
+        step_cost = 0.1
+        goal_reward = 1000.0
+        density_scale = 1.0
+
+        rewards = np.zeros_like(self.R, dtype=np.float32)
+        goal_x, goal_y = maze.end
+
+        for (x_idx, y_idx), state_idx in np.ndenumerate(feasibility.numbered_grid):
+            curr_cell = maze.maze_grid[x_idx, y_idx]
+            curr_distance = abs(goal_x - x_idx) + abs(goal_y - y_idx)
+            reachable_neighbors = find_reachable_neighbors(maze, curr_cell)
+
+            for neighbor in reachable_neighbors:
+                neighbor_idx = feasibility.numbered_grid[neighbor.x, neighbor.y]
+                neighbor_distance = abs(goal_x - neighbor.x) + abs(goal_y - neighbor.y)
+
+                if neighbor_idx == self.goal:
+                    reward = goal_reward
+                else:
+                    shaping = density_scale * (curr_distance - neighbor_distance)
+                    reward = -step_cost + shaping
+
+                rewards[state_idx, neighbor_idx] = reward
+
+        self.R = rewards
 
     def train(
         self,
@@ -105,7 +123,13 @@ class Agent:
             if state_callback:
                 state_callback(curr_state)
 
+            step_count = 0
+            step_limit = self.n_states * 4
+
             while True:
+                if step_count >= step_limit:
+                    break
+
                 poss_next_states = get_possible_next_states(curr_state, F, self.n_states)
                 if not poss_next_states:
                     break
@@ -130,6 +154,7 @@ class Agent:
                     self.lrn_rate * (self.R[curr_state][next_state] + (self.gamma * max_Q))
                 )
 
+                step_count += 1
                 curr_state = next_state
                 if state_callback:
                     state_callback(curr_state)
@@ -153,8 +178,10 @@ class Agent:
         # Walk to the goal from start using Q matrix.
         curr = self.start
         self.path.append(curr)
+        step_limit = self.n_states * 4
+        steps = 0
         print(str(curr) + "->", end="")
-        while curr != self.goal:
+        while curr != self.goal and steps < step_limit:
             # Restrict candidate actions to feasible transitions from the current
             # state to avoid picking unreachable cells when Q-values are tied.
             poss_next_states = get_possible_next_states(curr, feasibility.F_matrix, self.n_states)
@@ -181,10 +208,13 @@ class Agent:
             print(str(next_state) + "->", end="")
             curr = next_state
             self.path.append(curr)
+            steps += 1
         print("done")
 
         # When using very low learning/discount rates the agent may not have
         # learned a reliable path. In that case explicitly note completion so
         # callers can detect an unsuccessful traversal.
-        if "break" not in self.path and self.gamma < 0.5 and self.lrn_rate < 0.5:
+        if ("break" not in self.path and self.gamma < 0.5 and self.lrn_rate < 0.5) or (
+            curr != self.goal or steps >= step_limit
+        ):
             self.path.append("break")
