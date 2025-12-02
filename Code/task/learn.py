@@ -51,6 +51,9 @@ class Agent:
         record_q_values=False,
         state_callback=None,
         start_exploration_prob=0.05,
+        epsilon_start=1.0,
+        epsilon_decay=0.99,
+        min_epsilon=0.01,
     ):
         """Train the agent using Q-learning.
 
@@ -72,10 +75,20 @@ class Agent:
         start_exploration_prob: float
             Probability of starting an episode from a random state instead of
             the configured ``start`` position.
+        epsilon_start: float
+            Initial exploration probability for epsilon-greedy action
+            selection. With probability ``epsilon`` a random feasible action is
+            taken; otherwise, the action with the highest Q value is chosen.
+        epsilon_decay: float
+            Multiplicative decay factor applied to epsilon after every
+            training episode.
+        min_epsilon: float
+            Lower bound for epsilon so that exploration never fully vanishes.
         """
 
         self.episode_traces = []
         self.q_snapshots = [] if record_q_values else None
+        epsilon = epsilon_start
 
         # Compute the Q matrix
         for _ in range(0, max_epochs):
@@ -93,7 +106,16 @@ class Agent:
                 state_callback(curr_state)
 
             while True:
-                next_state = get_random_next_state(curr_state, F, self.n_states)
+                poss_next_states = get_possible_next_states(curr_state, F, self.n_states)
+                if not poss_next_states:
+                    break
+
+                if np.random.random() < epsilon:
+                    next_state = poss_next_states[np.random.randint(0, len(poss_next_states))]
+                else:
+                    q_values = self.Q[curr_state, poss_next_states]
+                    next_state = poss_next_states[int(np.argmax(q_values))]
+
                 poss_next_next_states = get_possible_next_states(next_state, F, self.n_states)
 
                 max_Q = -9999.99
@@ -124,6 +146,8 @@ class Agent:
                     self.q_snapshots.append(snapshot)
 
                 self.episode_traces.append(episode_record)
+
+            epsilon = max(min_epsilon, epsilon * epsilon_decay)
 
     def walk(self, maze, feasibility):
         # Walk to the goal from start using Q matrix.
