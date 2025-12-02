@@ -28,6 +28,15 @@ class LiveMazeViewer:
         self.screen = None
         self.background = None
         self.clock = None
+        self.trail_surface = None
+        self.previous_cell = None
+        self.state_to_indices = {
+            int(state): (i, j)
+            for i, row in enumerate(self.feasibility.numbered_grid)
+            for j, state in enumerate(row)
+        }
+        self.visit_counts = np.zeros_like(self.feasibility.numbered_grid, dtype=int)
+        self.max_visit_count = 1
 
         self._init_display()
 
@@ -38,6 +47,7 @@ class LiveMazeViewer:
         pygame.display.set_caption(self.title)
         self.clock = pygame.time.Clock()
         self.background = self._render_background()
+        self.trail_surface = pygame.Surface(self.screen.get_size(), pygame.SRCALPHA)
 
     def _render_background(self):
         width, height = (margin + cell_side * dim for dim in self.maze.maze_grid.shape)
@@ -52,8 +62,7 @@ class LiveMazeViewer:
         self.update_queue.put(state)
 
     def _state_to_cell(self, state: int):
-        idx_x = np.where(self.feasibility.numbered_grid == state)[0][0]
-        idx_y = np.where(self.feasibility.numbered_grid == state)[1][0]
+        idx_x, idx_y = self.state_to_indices[state]
         return self.maze.maze_grid[idx_x, idx_y]
 
     def _cell_center(self, cell):
@@ -64,9 +73,43 @@ class LiveMazeViewer:
     def _drain_updates(self):
         while True:
             try:
-                self.current_state = self.update_queue.get_nowait()
+                state = self.update_queue.get_nowait()
             except queue.Empty:
                 break
+
+            self.current_state = state
+            cell = self._state_to_cell(state)
+            self._increment_visit(state)
+            self._draw_trail(state, cell)
+
+    def _increment_visit(self, state):
+        idx_x, idx_y = self.state_to_indices[state]
+        self.visit_counts[idx_x, idx_y] += 1
+        self.max_visit_count = max(self.max_visit_count, self.visit_counts[idx_x, idx_y])
+
+    def _visit_color(self, state):
+        idx_x, idx_y = self.state_to_indices[state]
+        count = self.visit_counts[idx_x, idx_y]
+        ratio = count / self.max_visit_count
+        start_color = np.array([255, 220, 220])
+        end_color = np.array([180, 0, 0])
+        color = start_color + ratio * (end_color - start_color)
+        return tuple(int(channel) for channel in color)
+
+    def _draw_trail(self, state, cell):
+        color = self._visit_color(state)
+        current_center = self._cell_center(cell)
+        if self.previous_cell is not None:
+            pygame.draw.line(
+                self.trail_surface,
+                color,
+                self._cell_center(self.previous_cell),
+                current_center,
+                max(1, int(line_thickness / 2)),
+            )
+
+        pygame.draw.circle(self.trail_surface, color, current_center, int(cell_side / 4))
+        self.previous_cell = cell
 
     def _draw_agent(self):
         if self.current_state is None:
@@ -95,6 +138,7 @@ class LiveMazeViewer:
 
             self._drain_updates()
             self.screen.blit(self.background, (0, 0))
+            self.screen.blit(self.trail_surface, (0, 0))
             self._draw_agent()
             pygame.display.flip()
 
