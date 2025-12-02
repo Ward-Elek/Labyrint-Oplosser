@@ -1,19 +1,10 @@
 from cell import Cell
-import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
 # Some predefined values for the visualization
 margin = 80
 cell_side = 100
 line_thickness = 10
-
-
-class PathNotFound(Exception):
-    """Exception raised when maze path is not found."""
-
-    def __init__(self, message="Maze path was not found, unable to draw a gif. Please try different parameters."):
-        self.message = message
-        super().__init__(self.message)
 
 
 def draw_cell(cell, image, color="black", count=0, wide=5, method="grid"):
@@ -71,21 +62,6 @@ def draw_agent(cell, image, color="blue"):
     image.ellipse((x - cell_side / 3, y - cell_side / 3, x + cell_side / 3, y + cell_side / 3), fill=color)
 
 
-def make_movie(maze, feasibility, path, filename="maze_path.gif"):
-    """Function for drawing a visualization of how the agent moves through the labyrinth."""
-    images = []
-    durations = []
-
-    if 'break' in path:
-        raise PathNotFound
-
-    for position in path:
-        images.append(render_agent_frame(maze, feasibility, position))
-        durations.append(400)
-
-    images[0].save(filename, save_all=True, append_images=images[1:], optimize=False, duration=durations, loop=0)
-
-
 def draw_maze(maze, filename="maze.png"):
     """Function for drawing a static image of the maze."""
     width, height = (margin + cell_side * dim for dim in maze.maze_grid.shape)
@@ -97,59 +73,3 @@ def draw_maze(maze, filename="maze.png"):
         draw_cell(cell, maze_img, method="not_grid")
     img.save(filename)
 
-
-def render_agent_frame(maze, feasibility, position, color="blue"):
-    width, height = (margin + cell_side * dim for dim in maze.maze_grid.shape)
-
-    ind1 = np.where(feasibility.numbered_grid == position)[0][0]
-    ind2 = np.where(feasibility.numbered_grid == position)[1][0]
-    cell = maze.maze_grid[ind1, ind2]
-
-    im = Image.new('RGB', (width, height), (255, 255, 255))
-    draw = ImageDraw.Draw(im)
-    draw_image(draw, maze.maze_grid)
-    draw_agent(cell, draw, color=color)
-
-    return im
-
-
-def make_training_movie(
-    maze,
-    feasibility,
-    episode_traces,
-    final_path=None,
-    filename="training_progress.gif",
-    episode_frame_duration=120,
-    final_frame_duration=400,
-):
-    """Build an animation that replays the training episodes followed by the solved walk."""
-
-    if not episode_traces:
-        raise ValueError("No episode traces recorded; enable episode capture during training.")
-
-    images = []
-    durations = []
-
-    for episode in episode_traces:
-        states = episode.get("states") if isinstance(episode, dict) else episode
-        if not states:
-            continue
-
-        for position in states:
-            if position == 'break':
-                continue
-            images.append(render_agent_frame(maze, feasibility, position, color="orange"))
-            durations.append(episode_frame_duration)
-
-    if final_path:
-        if 'break' in final_path:
-            raise PathNotFound
-
-        for position in final_path:
-            images.append(render_agent_frame(maze, feasibility, position, color="blue"))
-            durations.append(final_frame_duration)
-
-    if not images:
-        raise ValueError("No frames were generated for the training animation.")
-
-    images[0].save(filename, save_all=True, append_images=images[1:], optimize=False, duration=durations, loop=0)

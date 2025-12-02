@@ -1,8 +1,13 @@
-from maze import Maze
+import threading
+import time
+from numbers import Integral
+
+import pandas as pd
+
 from convert import Feasibility
 from learn import Agent
-from draw import make_movie, make_training_movie, PathNotFound
-import pandas as pd
+from live_view import LiveMazeViewer
+from maze import Maze
 
 
 def my_print(Q):
@@ -10,6 +15,14 @@ def my_print(Q):
     df = pd.DataFrame(Q, columns=labels, index=labels)
     pd.set_option('display.max_rows', None)
     print(df.to_string())
+
+
+def playback_path(viewer, path_states, delay_seconds: float = 0.35):
+    """Feed solved path states into the live viewer queue for playback."""
+
+    for state in path_states:
+        viewer.enqueue_state(int(state))
+        time.sleep(delay_seconds)
 
 
 if __name__ == "__main__":
@@ -61,12 +74,6 @@ if __name__ == "__main__":
 
     max_epochs = 1000
 
-    # Ask whether to record episode traces for a training animation. Enabled by
-    # default so users see the full learning process unless they explicitly
-    # opt out to save memory.
-    record_choice = input('Record training episodes for animation? [Y/n]: ').strip().lower()
-    record_episodes = False if record_choice == 'n' else True
-
     # Create the Maze
     maze = Maze(dimension1, dimension2, [start_x, start_y])
 
@@ -81,8 +88,7 @@ if __name__ == "__main__":
     my_print(feasibility.F_matrix)
 
     # Train the model:
-    agent.train(feasibility.F_matrix, max_epochs, record_episodes=record_episodes)
-    # train(feasibility.F_matrix, R_matrix, Q_matrix, gamma, lrn_rate, goal, n_states, max_epochs)
+    agent.train(feasibility.F_matrix, max_epochs)
     print("Done ")
 
     print("The Q matrix is: \n ")
@@ -92,15 +98,13 @@ if __name__ == "__main__":
 
     agent.walk(maze, feasibility)
 
-    try:
-        make_movie(maze, feasibility, agent.path)
-        print("Saved visualization to maze_path.gif")
-    except PathNotFound as err:
-        print(err)
-
-    if record_episodes and agent.episode_traces:
-        try:
-            make_training_movie(maze, feasibility, agent.episode_traces, final_path=agent.path)
-            print("Saved training animation to training_progress.gif")
-        except (PathNotFound, ValueError) as err:
-            print(err)
+    solved_path = [state for state in agent.path if isinstance(state, Integral)]
+    if not solved_path:
+        print("Er kon geen geldig pad worden gevonden.")
+    else:
+        viewer = LiveMazeViewer(maze, feasibility, title="Maze solution")
+        viewer.set_solved_path(solved_path)
+        playback = threading.Thread(target=playback_path, args=(viewer, solved_path), daemon=True)
+        playback.start()
+        viewer.run()
+        playback.join()
