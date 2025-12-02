@@ -42,7 +42,7 @@ class Agent:
         # Set the highest reward for reaching the end of the maze:
         self.R[previous, self.goal] = 1000.0
 
-    def train(self, F, max_epochs, record_episodes=False, record_q_values=False):
+    def train(self, F, max_epochs, record_episodes=False, record_q_values=False, state_callback=None):
         """Train the agent using Q-learning.
 
         Parameters
@@ -56,6 +56,9 @@ class Agent:
         record_q_values: bool
             Whether to store a deep copy of the Q matrix after every episode.
             Ignored unless ``record_episodes`` is True.
+        state_callback: callable | None
+            Optional callable invoked after every state transition with the
+            current state identifier.
         """
 
         self.episode_traces = []
@@ -83,6 +86,8 @@ class Agent:
                 )
 
                 curr_state = next_state
+                if state_callback:
+                    state_callback(curr_state)
                 if record_episodes:
                     episode_states.append(curr_state)
                 if curr_state == self.goal:
