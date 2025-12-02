@@ -1,4 +1,5 @@
 import numpy as np
+from callback_protocol import RESET_SIGNAL
 from convert import find_reachable_neighbors
 
 
@@ -58,7 +59,8 @@ class Agent:
             Ignored unless ``record_episodes`` is True.
         state_callback: callable | None
             Optional callable invoked after every state transition with the
-            current state identifier.
+            current state identifier. A reset sentinel is emitted before the
+            first state of each episode.
         """
 
         self.episode_traces = []
@@ -66,6 +68,8 @@ class Agent:
 
         # Compute the Q matrix
         for _ in range(0, max_epochs):
+            if state_callback:
+                state_callback(RESET_SIGNAL)
             curr_state = np.random.randint(0, self.n_states)  # random start state
             episode_states = [curr_state] if record_episodes else None
 
