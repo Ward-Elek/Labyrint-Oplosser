@@ -43,7 +43,15 @@ class Agent:
         # Set the highest reward for reaching the end of the maze:
         self.R[previous, self.goal] = 1000.0
 
-    def train(self, F, max_epochs, record_episodes=False, record_q_values=False, state_callback=None):
+    def train(
+        self,
+        F,
+        max_epochs,
+        record_episodes=False,
+        record_q_values=False,
+        state_callback=None,
+        start_exploration_prob=0.05,
+    ):
         """Train the agent using Q-learning.
 
         Parameters
@@ -61,6 +69,9 @@ class Agent:
             Optional callable invoked after every state transition with the
             current state identifier. A reset sentinel is emitted before the
             first state of each episode.
+        start_exploration_prob: float
+            Probability of starting an episode from a random state instead of
+            the configured ``start`` position.
         """
 
         self.episode_traces = []
@@ -70,8 +81,16 @@ class Agent:
         for _ in range(0, max_epochs):
             if state_callback:
                 state_callback(RESET_SIGNAL)
-            curr_state = np.random.randint(0, self.n_states)  # random start state
+
+            explore_start = np.random.random() < start_exploration_prob
+            if explore_start:
+                curr_state = np.random.randint(0, self.n_states)
+            else:
+                curr_state = self.start
+
             episode_states = [curr_state] if record_episodes else None
+            if state_callback:
+                state_callback(curr_state)
 
             while True:
                 next_state = get_random_next_state(curr_state, F, self.n_states)
