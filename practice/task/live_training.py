@@ -2,6 +2,8 @@
 
 import threading
 
+import numpy as np
+
 from convert import Feasibility
 from learn import Agent
 from live_view import LiveMazeViewer
@@ -70,6 +72,10 @@ def main():
             record_q_values=False,
             state_callback=callback,
         )
+        agent.path = []
+        agent.walk(maze, feasibility)
+        solved_path = [state for state in agent.path if isinstance(state, (int, np.integer))]
+        viewer.set_solved_path(solved_path)
         training_done.set()
 
     training_thread = threading.Thread(target=training_task, daemon=True)

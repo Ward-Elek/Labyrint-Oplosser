@@ -42,6 +42,8 @@ class LiveMazeViewer:
         }
         self.visit_counts = np.zeros_like(self.feasibility.numbered_grid, dtype=int)
         self.max_visit_count = 1
+        self.solved_path_states = None
+        self.solved_path_surface = None
 
         self._init_display()
 
@@ -66,6 +68,15 @@ class LiveMazeViewer:
         """Add a new state update to the rendering queue."""
 
         self.update_queue.put(state)
+
+    def set_solved_path(self, path_states):
+        """Store the solved path states for later rendering.
+
+        The actual drawing occurs in the render loop to keep all Pygame
+        operations on the same thread.
+        """
+
+        self.solved_path_states = path_states
 
     def _state_to_cell(self, state: int):
         idx_x, idx_y = self.state_to_indices[state]
@@ -152,9 +163,31 @@ class LiveMazeViewer:
         self.screen.fill((255, 255, 255))
         self.screen.blit(scaled_background, (offset_x, offset_y))
         self.screen.blit(scaled_trail, (offset_x, offset_y))
+        if self.solved_path_surface:
+            scaled_solution = pygame.transform.smoothscale(self.solved_path_surface, (width, height))
+            self.screen.blit(scaled_solution, (offset_x, offset_y))
 
     def _change_zoom(self, delta):
         self.zoom = min(self.max_zoom, max(self.min_zoom, self.zoom + delta))
+
+    def _ensure_solved_path_surface(self):
+        """Render a green overlay for the solved path once available."""
+
+        if self.solved_path_surface is not None or not self.solved_path_states:
+            return
+
+        solution_surface = pygame.Surface((self.base_width, self.base_height), pygame.SRCALPHA)
+        path_cells = [self._state_to_cell(state) for state in self.solved_path_states if state in self.state_to_indices]
+
+        if len(path_cells) < 2:
+            return
+
+        points = [self._cell_center(cell) for cell in path_cells]
+        pygame.draw.lines(solution_surface, (0, 180, 0), False, points, max(2, int(line_thickness)))
+        for center in points:
+            pygame.draw.circle(solution_surface, (0, 200, 0), center, int(cell_side / 5))
+
+        self.solved_path_surface = solution_surface
 
     def run(self, completion_event: Optional["threading.Event"] = None, fps: int = 30):
         """Start the rendering loop.
@@ -162,8 +195,8 @@ class LiveMazeViewer:
         Parameters
         ----------
         completion_event: threading.Event | None
-            Optional event that signals when training has finished. When the
-            event is set and no new updates are pending, the loop exits.
+            Optional event that signals when training has finished. The viewer
+            remains open until the user closes the window.
         fps: int
             Maximum frames per second for the draw loop.
         """
@@ -182,12 +215,10 @@ class LiveMazeViewer:
                         self._change_zoom(-0.1)
 
             self._drain_updates()
+            self._ensure_solved_path_surface()
             self._blit_scaled_surfaces()
             self._draw_agent()
             pygame.display.flip()
-
-            if completion_event and completion_event.is_set() and self.update_queue.empty():
-                self.running = False
 
             self.clock.tick(fps)
 
