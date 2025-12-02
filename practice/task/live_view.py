@@ -30,6 +30,11 @@ class LiveMazeViewer:
         self.clock = None
         self.trail_surface = None
         self.previous_cell = None
+        self.agent_pos = None
+        self.source_center = None
+        self.target_center = None
+        self.transition_elapsed = 0.0
+        self.transition_duration = 0.25
         self.state_to_indices = {
             int(state): (i, j)
             for i, row in enumerate(self.feasibility.numbered_grid)
@@ -81,6 +86,17 @@ class LiveMazeViewer:
             cell = self._state_to_cell(state)
             self._increment_visit(state)
             self._draw_trail(state, cell)
+            self._start_transition(cell)
+
+    def _start_transition(self, cell):
+        new_center = tuple(float(coord) for coord in self._cell_center(cell))
+
+        if self.agent_pos is None:
+            self.agent_pos = new_center
+
+        self.source_center = self.agent_pos
+        self.target_center = new_center
+        self.transition_elapsed = 0.0
 
     def _increment_visit(self, state):
         idx_x, idx_y = self.state_to_indices[state]
@@ -111,12 +127,32 @@ class LiveMazeViewer:
         pygame.draw.circle(self.trail_surface, color, current_center, int(cell_side / 4))
         self.previous_cell = cell
 
-    def _draw_agent(self):
-        if self.current_state is None:
+    def _update_animation(self, dt: float):
+        if self.target_center is None or self.agent_pos is None:
             return
 
-        cell = self._state_to_cell(self.current_state)
-        pygame.draw.circle(self.screen, (0, 0, 255), self._cell_center(cell), int(cell_side / 3))
+        if self.transition_duration <= 0:
+            self.agent_pos = self.target_center
+            return
+
+        self.transition_elapsed = min(
+            self.transition_elapsed + dt, self.transition_duration
+        )
+        t = self.transition_elapsed / self.transition_duration
+        sx, sy = self.source_center
+        tx, ty = self.target_center
+        self.agent_pos = (sx + (tx - sx) * t, sy + (ty - sy) * t)
+
+    def _draw_agent(self):
+        if self.agent_pos is None:
+            return
+
+        pygame.draw.circle(
+            self.screen,
+            (0, 0, 255),
+            (int(self.agent_pos[0]), int(self.agent_pos[1])),
+            int(cell_side / 3),
+        )
 
     def run(self, completion_event: Optional["threading.Event"] = None, fps: int = 30):
         """Start the rendering loop.
@@ -132,11 +168,13 @@ class LiveMazeViewer:
 
         self.running = True
         while self.running:
+            dt = self.clock.tick(fps) / 1000.0
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
 
             self._drain_updates()
+            self._update_animation(dt)
             self.screen.blit(self.background, (0, 0))
             self.screen.blit(self.trail_surface, (0, 0))
             self._draw_agent()
@@ -144,7 +182,5 @@ class LiveMazeViewer:
 
             if completion_event and completion_event.is_set() and self.update_queue.empty():
                 self.running = False
-
-            self.clock.tick(fps)
 
         pygame.quit()
