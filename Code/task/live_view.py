@@ -379,7 +379,8 @@ class LiveMazeViewer:
         if not self.screen:
             return
 
-        base_dir = Path(__file__).resolve().parent
+        base_dir = Path(__file__).resolve().parents[2] / "Media"
+        base_dir.mkdir(parents=True, exist_ok=True)
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
         # Refresh the composed surface before saving.
@@ -389,9 +390,18 @@ class LiveMazeViewer:
         maze_path = base_dir / f"maze_view_{timestamp}.png"
         pygame.image.save(self.screen, maze_path)
 
+        if self.solved_path_surface:
+            solved_surface = pygame.Surface((self.base_width, self.base_height), pygame.SRCALPHA)
+            solved_surface.blit(self.background, (0, 0))
+            solved_surface.blit(self.solved_path_surface, (0, 0))
+            solved_path = base_dir / f"solved_maze_{timestamp}.png"
+            pygame.image.save(solved_surface, solved_path)
+
         if self.metrics_surface:
-            metrics_path = base_dir / f"metrics_{timestamp}.png"
-            pygame.image.save(self.metrics_surface, metrics_path)
+            metrics_panel = pygame.Surface((self.base_width, self.base_height), pygame.SRCALPHA)
+            metrics_panel.blit(self.metrics_surface, (0, 0))
+            metrics_path = base_dir / f"metrics_panel_{timestamp}.png"
+            pygame.image.save(metrics_panel, metrics_path)
 
     def run(self, completion_event: Optional["threading.Event"] = None, fps: int = 30):
         """Start the rendering loop.
