@@ -60,9 +60,13 @@ def main():
 
     viewer = LiveMazeViewer(maze, feasibility)
     training_done = threading.Event()
+    episode_metrics = []
 
     def callback(state):
         viewer.enqueue_state(state)
+
+    def on_episode(metrics):
+        episode_metrics.append(metrics)
 
     def training_task():
         agent.train(
@@ -71,6 +75,7 @@ def main():
             record_episodes=False,
             record_q_values=False,
             state_callback=callback,
+            episode_callback=on_episode,
         )
         agent.path = []
         agent.walk(maze, feasibility)

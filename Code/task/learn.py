@@ -50,6 +50,7 @@ class Agent:
         record_episodes=False,
         record_q_values=False,
         state_callback=None,
+        episode_callback=None,
         start_exploration_prob=0.05,
         epsilon_start=1.0,
         epsilon_decay=0.99,
@@ -72,6 +73,10 @@ class Agent:
             Optional callable invoked after every state transition with the
             current state identifier. A reset sentinel is emitted before the
             first state of each episode.
+        episode_callback: callable | None
+            Optional callable invoked after each episode with a dictionary of
+            episode metrics including cumulative reward, number of steps,
+            whether the goal was reached, and the epsilon value used.
         start_exploration_prob: float
             Probability of starting an episode from a random state instead of
             the configured ``start`` position.
@@ -102,6 +107,9 @@ class Agent:
                 curr_state = self.start
 
             episode_states = [curr_state] if record_episodes else None
+            cumulative_reward = 0.0
+            steps_taken = 0
+            episode_epsilon = epsilon
             if state_callback:
                 state_callback(curr_state)
 
@@ -126,9 +134,13 @@ class Agent:
                         max_Q = q
                 # Bellman's equation: Q = [(1 - alpha) * Q]  +  [alpha * (reward + (gamma * maxQ))]
                 # Update the Q matrix
+                reward = self.R[curr_state][next_state]
                 self.Q[curr_state][next_state] = ((1 - self.lrn_rate) * self.Q[curr_state][next_state]) + (
-                    self.lrn_rate * (self.R[curr_state][next_state] + (self.gamma * max_Q))
+                    self.lrn_rate * (reward + (self.gamma * max_Q))
                 )
+
+                cumulative_reward += reward
+                steps_taken += 1
 
                 curr_state = next_state
                 if state_callback:
@@ -139,13 +151,31 @@ class Agent:
                     break
 
             if record_episodes:
-                episode_record = {"states": episode_states}
+                episode_record = {
+                    "states": episode_states,
+                    "metrics": {
+                        "cumulative_reward": cumulative_reward,
+                        "steps": steps_taken,
+                        "terminal": curr_state == self.goal,
+                        "epsilon": episode_epsilon,
+                    },
+                }
                 if record_q_values:
                     snapshot = np.copy(self.Q)
                     episode_record["q"] = snapshot
                     self.q_snapshots.append(snapshot)
 
                 self.episode_traces.append(episode_record)
+
+            if episode_callback:
+                episode_callback(
+                    {
+                        "cumulative_reward": cumulative_reward,
+                        "steps": steps_taken,
+                        "terminal": curr_state == self.goal,
+                        "epsilon": episode_epsilon,
+                    }
+                )
 
             epsilon = max(min_epsilon, epsilon * epsilon_decay)
 
