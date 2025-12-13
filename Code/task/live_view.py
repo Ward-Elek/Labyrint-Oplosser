@@ -474,6 +474,13 @@ class LiveMazeViewer:
 
         base_dir = Path(__file__).resolve().parents[2] / "Media"
         base_dir.mkdir(parents=True, exist_ok=True)
+
+        for pattern in ("*.png", "*.csv", "*.json"):
+            for file in base_dir.glob(pattern):
+                try:
+                    file.unlink()
+                except FileNotFoundError:
+                    continue
         timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
         # Refresh the composed surface before saving.
