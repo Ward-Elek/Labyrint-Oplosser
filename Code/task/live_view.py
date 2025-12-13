@@ -354,6 +354,59 @@ class LiveMazeViewer:
         self.metrics_visible = not self.metrics_visible
         self._redraw_metrics_surface()
 
+    def _sanitize_metric_name(self, name: str) -> str:
+        return "".join(c if c.isalnum() or c in {"_", "-"} else "_" for c in name)
+
+    def _export_metric_series(self, base_dir: Path, timestamp: str):
+        if not self.metric_series:
+            return
+
+        width, height = 640, 360
+        padding = 40
+        plot_left = padding
+        plot_top = padding
+        plot_right = width - padding
+        plot_bottom = height - padding
+
+        for idx, (name, series) in enumerate(self.metric_series.items()):
+            if not series:
+                continue
+
+            img = Image.new("RGB", (width, height), (255, 255, 255))
+            drawer = ImageDraw.Draw(img)
+            drawer.rectangle(
+                [(plot_left, plot_top), (plot_right, plot_bottom)], outline=(200, 200, 200)
+            )
+
+            min_value = min(series)
+            max_value = max(series)
+            value_range = max(max_value - min_value, 1e-9)
+            color = self.metric_colors[idx % len(self.metric_colors)]
+
+            points = []
+            for i, value in enumerate(series):
+                x = plot_left + int(i * (plot_right - plot_left) / max(1, len(series) - 1))
+                y_ratio = (value - min_value) / value_range
+                y = plot_bottom - int(y_ratio * (plot_bottom - plot_top))
+                points.append((x, y))
+
+            if len(points) == 1:
+                drawer.ellipse(
+                    [
+                        (points[0][0] - 2, points[0][1] - 2),
+                        (points[0][0] + 2, points[0][1] + 2),
+                    ],
+                    fill=color,
+                )
+            else:
+                drawer.line(points, fill=color, width=2)
+
+            drawer.text((plot_left, plot_top - 24), str(name), fill=(80, 80, 80))
+
+            safe_name = self._sanitize_metric_name(str(name))
+            metric_path = base_dir / f"metric_{safe_name}_{timestamp}.png"
+            img.save(metric_path)
+
     def _ensure_solved_path_surface(self):
         """Render a green overlay for the solved path once available."""
 
@@ -402,6 +455,8 @@ class LiveMazeViewer:
             metrics_panel.blit(self.metrics_surface, (0, 0))
             metrics_path = base_dir / f"metrics_panel_{timestamp}.png"
             pygame.image.save(metrics_panel, metrics_path)
+
+        self._export_metric_series(base_dir, timestamp)
 
     def run(self, completion_event: Optional["threading.Event"] = None, fps: int = 30):
         """Start the rendering loop.
