@@ -179,12 +179,19 @@ class Agent:
 
             epsilon = max(min_epsilon, epsilon * epsilon_decay)
 
-    def walk(self, maze, feasibility):
+    def walk(self, maze, feasibility, max_walk_steps=1000):
         # Walk to the goal from start using Q matrix.
         curr = self.start
         self.path.append(curr)
+        visited_states = {curr}
         print(str(curr) + "->", end="")
+        steps_taken = 0
         while curr != self.goal:
+            if steps_taken >= max_walk_steps:
+                self.path.append("break")
+                print("break", end="")
+                break
+
             # Restrict candidate actions to feasible transitions from the current
             # state to avoid picking unreachable cells when Q-values are tied.
             poss_next_states = get_possible_next_states(curr, feasibility.F_matrix, self.n_states)
@@ -208,9 +215,16 @@ class Agent:
                 print("break", end="")
                 break
 
+            if next_state in visited_states:
+                self.path.append("break")
+                print("break", end="")
+                break
+
             print(str(next_state) + "->", end="")
             curr = next_state
             self.path.append(curr)
+            visited_states.add(curr)
+            steps_taken += 1
         print("done")
 
         # When using very low learning/discount rates the agent may not have
