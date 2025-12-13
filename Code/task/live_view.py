@@ -34,7 +34,7 @@ class LiveMazeViewer:
         self.metrics_surface = None
         self.previous_cell = None
         self.zoom = 1.0
-        self.min_zoom = 0.5
+        self.min_zoom = 0.1
         self.max_zoom = 3.0
         self.base_width = None
         self.base_height = None
