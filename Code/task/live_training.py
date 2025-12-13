@@ -67,6 +67,7 @@ def main():
 
     def on_episode(metrics):
         episode_metrics.append(metrics)
+        viewer.enqueue_metrics(metrics)
 
     def training_task():
         agent.train(
