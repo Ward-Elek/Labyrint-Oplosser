@@ -19,7 +19,13 @@ from draw import cell_side, draw_image, line_thickness, margin
 class LiveMazeViewer:
     """Display live agent movement using Pygame."""
 
-    def __init__(self, maze, feasibility, title: str = "Live Maze Training"):
+    def __init__(
+        self,
+        maze,
+        feasibility,
+        title: str = "Live Maze Training",
+        metrics_window: int = 100,
+    ):
         self.maze = maze
         self.feasibility = feasibility
         self.title = title
@@ -42,6 +48,7 @@ class LiveMazeViewer:
         self.maze_height = None
         self.metrics_width = 220
         self.metrics_visible = True
+        self.metrics_window = metrics_window
         self.state_to_indices = {
             int(state): (i, j)
             for i, row in enumerate(self.feasibility.numbered_grid)
@@ -58,6 +65,7 @@ class LiveMazeViewer:
             (231, 76, 60),
             (155, 89, 182),
         ]
+        self.metric_font = None
 
         self._init_display()
 
@@ -74,6 +82,7 @@ class LiveMazeViewer:
         self.background = self._render_background()
         self.trail_surface = pygame.Surface(self.screen.get_size(), pygame.SRCALPHA)
         self.metrics_surface = pygame.Surface(self.screen.get_size(), pygame.SRCALPHA)
+        self.metric_font = pygame.font.SysFont(None, 14)
 
     def _render_background(self):
         img = Image.new("RGB", (self.base_width, self.base_height), (255, 255, 255))
@@ -289,39 +298,55 @@ class LiveMazeViewer:
         if not self.metric_series:
             return
 
-        padding = 16
+        padding = 12
+        gap = 8
         plot_rect = panel_rect.inflate(-2 * padding, -2 * padding)
 
-        all_values = [
-            value
-            for series in self.metric_series.values()
-            for value in series[-plot_rect.width :]
-        ]
+        metric_items = list(self.metric_series.items())
+        num_plots = len(metric_items)
 
-        if not all_values:
+        if num_plots == 0:
             return
 
-        min_value = min(all_values)
-        max_value = max(all_values)
-        value_range = max(max_value - min_value, 1e-5)
+        subplot_height = 0
+        if num_plots:
+            available_height = plot_rect.height - gap * (num_plots - 1)
+            subplot_height = max(20, available_height // num_plots)
 
-        for idx, (name, series) in enumerate(self.metric_series.items()):
-            data = series[-plot_rect.width :]
+        y_cursor = plot_rect.top
+        for idx, (name, series) in enumerate(metric_items):
+            subplot_rect = pygame.Rect(plot_rect.left, y_cursor, plot_rect.width, subplot_height)
+            y_cursor += subplot_height + gap
+
+            data = series[-self.metrics_window :]
             if not data:
                 continue
+
+            if len(data) > subplot_rect.width:
+                data = data[-subplot_rect.width :]
+
+            min_value = min(data)
+            max_value = max(data)
+            value_range = max(max_value - min_value, 1e-5)
 
             color = self.metric_colors[idx % len(self.metric_colors)]
             points = []
             for i, value in enumerate(data):
-                x = plot_rect.left + int(i * (plot_rect.width - 1) / max(1, len(data) - 1))
+                x = subplot_rect.left + int(i * (subplot_rect.width - 1) / max(1, len(data) - 1))
                 y_ratio = (value - min_value) / value_range
-                y = plot_rect.bottom - int(y_ratio * (plot_rect.height - 1))
+                y = subplot_rect.bottom - int(y_ratio * (subplot_rect.height - 1))
                 points.append((x, y))
 
+            pygame.draw.rect(self.metrics_surface, (220, 220, 220), subplot_rect, 1)
             if len(points) == 1:
                 pygame.draw.circle(self.metrics_surface, color, points[0], 2)
             else:
                 pygame.draw.lines(self.metrics_surface, color, False, points, 2)
+
+            if self.metric_font:
+                label_surface = self.metric_font.render(str(name), True, (80, 80, 80))
+                label_pos = (subplot_rect.left + 4, subplot_rect.top + 2)
+                self.metrics_surface.blit(label_surface, label_pos)
 
     def _toggle_metrics(self):
         self.metrics_visible = not self.metrics_visible
