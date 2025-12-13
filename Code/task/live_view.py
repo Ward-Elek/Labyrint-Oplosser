@@ -5,7 +5,9 @@ and renders the agent's current position inside the maze as those updates
 arrive.
 """
 
+import datetime
 import queue
+from pathlib import Path
 from typing import Optional
 
 import numpy as np
@@ -371,6 +373,26 @@ class LiveMazeViewer:
 
         self.solved_path_surface = solution_surface
 
+    def _save_final_images(self):
+        """Persist the current maze and metrics views to disk."""
+
+        if not self.screen:
+            return
+
+        base_dir = Path(__file__).resolve().parent
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        # Refresh the composed surface before saving.
+        self._blit_scaled_surfaces()
+        self._draw_agent()
+
+        maze_path = base_dir / f"maze_view_{timestamp}.png"
+        pygame.image.save(self.screen, maze_path)
+
+        if self.metrics_surface:
+            metrics_path = base_dir / f"metrics_{timestamp}.png"
+            pygame.image.save(self.metrics_surface, metrics_path)
+
     def run(self, completion_event: Optional["threading.Event"] = None, fps: int = 30):
         """Start the rendering loop.
 
@@ -407,4 +429,5 @@ class LiveMazeViewer:
 
             self.clock.tick(fps)
 
+        self._save_final_images()
         pygame.quit()
