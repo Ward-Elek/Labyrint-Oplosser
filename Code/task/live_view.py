@@ -24,18 +24,24 @@ class LiveMazeViewer:
         self.feasibility = feasibility
         self.title = title
         self.update_queue: "queue.Queue[object]" = queue.Queue()
+        self.metrics_queue: "queue.Queue[object]" = queue.Queue()
         self.current_state: Optional[int] = None
         self.running = False
         self.screen = None
         self.background = None
         self.clock = None
         self.trail_surface = None
+        self.metrics_surface = None
         self.previous_cell = None
         self.zoom = 1.0
         self.min_zoom = 0.5
         self.max_zoom = 3.0
         self.base_width = None
         self.base_height = None
+        self.maze_width = None
+        self.maze_height = None
+        self.metrics_width = 220
+        self.metrics_visible = True
         self.state_to_indices = {
             int(state): (i, j)
             for i, row in enumerate(self.feasibility.numbered_grid)
@@ -45,25 +51,45 @@ class LiveMazeViewer:
         self.max_visit_count = 1
         self.solved_path_states = None
         self.solved_path_surface = None
+        self.metric_series: dict[str, list[float]] = {}
+        self.metric_colors = [
+            (52, 152, 219),
+            (46, 204, 113),
+            (231, 76, 60),
+            (155, 89, 182),
+        ]
 
         self._init_display()
 
     def _init_display(self):
         pygame.init()
-        self.base_width, self.base_height = (
+        self.maze_width, self.maze_height = (
             margin + cell_side * dim for dim in self.maze.maze_grid.shape
         )
+        self.base_width = self.maze_width + self.metrics_width
+        self.base_height = self.maze_height
         self.screen = pygame.display.set_mode((self.base_width, self.base_height))
         pygame.display.set_caption(self.title)
         self.clock = pygame.time.Clock()
         self.background = self._render_background()
         self.trail_surface = pygame.Surface(self.screen.get_size(), pygame.SRCALPHA)
+        self.metrics_surface = pygame.Surface(self.screen.get_size(), pygame.SRCALPHA)
 
     def _render_background(self):
         img = Image.new("RGB", (self.base_width, self.base_height), (255, 255, 255))
         drawer = ImageDraw.Draw(img)
         draw_image(drawer, self.maze.maze_grid)
         self._highlight_start_and_end(drawer)
+        drawer.rectangle(
+            (
+                self.maze_width,
+                0,
+                self.base_width - 1,
+                self.base_height - 1,
+            ),
+            fill=(245, 245, 245),
+            outline=(200, 200, 200),
+        )
         return pygame.image.fromstring(img.tobytes(), img.size, img.mode)
 
     def _highlight_start_and_end(self, drawer: ImageDraw.ImageDraw):
@@ -97,6 +123,11 @@ class LiveMazeViewer:
         """Add a new state update (or control signal) to the rendering queue."""
 
         self.update_queue.put(state)
+
+    def enqueue_metrics(self, metrics):
+        """Add a metrics update to the metrics rendering queue."""
+
+        self.metrics_queue.put(metrics)
 
     def reset_trail(self, clear_surface: bool = False):
         """Clear the stored trail between episodes.
@@ -145,6 +176,26 @@ class LiveMazeViewer:
             cell = self._state_to_cell(state)
             self._increment_visit(state)
             self._draw_trail(state, cell)
+
+    def _drain_metrics(self):
+        updated = False
+
+        while True:
+            try:
+                metrics = self.metrics_queue.get_nowait()
+            except queue.Empty:
+                break
+
+            updated = True
+            if isinstance(metrics, dict):
+                for key, value in metrics.items():
+                    if isinstance(value, (int, float, np.floating)):
+                        self.metric_series.setdefault(str(key), []).append(float(value))
+            elif isinstance(metrics, (int, float, np.floating)):
+                self.metric_series.setdefault("value", []).append(float(metrics))
+
+        if updated:
+            self._redraw_metrics_surface()
 
     def _increment_visit(self, state):
         idx_x, idx_y = self.state_to_indices[state]
@@ -203,6 +254,9 @@ class LiveMazeViewer:
         width, height = self._scaled_dimensions()
         scaled_background = pygame.transform.smoothscale(self.background, (width, height))
         scaled_trail = pygame.transform.smoothscale(self.trail_surface, (width, height))
+        scaled_metrics = None
+        if self.metrics_surface and self.metrics_visible:
+            scaled_metrics = pygame.transform.smoothscale(self.metrics_surface, (width, height))
 
         offset_x = (self.screen.get_width() - width) // 2
         offset_y = (self.screen.get_height() - height) // 2
@@ -213,9 +267,65 @@ class LiveMazeViewer:
         if self.solved_path_surface:
             scaled_solution = pygame.transform.smoothscale(self.solved_path_surface, (width, height))
             self.screen.blit(scaled_solution, (offset_x, offset_y))
+        if scaled_metrics:
+            self.screen.blit(scaled_metrics, (offset_x, offset_y))
 
     def _change_zoom(self, delta):
         self.zoom = min(self.max_zoom, max(self.min_zoom, self.zoom + delta))
+
+    def _redraw_metrics_surface(self):
+        if not self.metrics_surface:
+            return
+
+        self.metrics_surface.fill((0, 0, 0, 0))
+        if not self.metrics_visible:
+            return
+
+        panel_x = self.maze_width
+        panel_rect = pygame.Rect(panel_x, 0, self.metrics_width, self.base_height)
+        pygame.draw.rect(self.metrics_surface, (250, 250, 250), panel_rect)
+        pygame.draw.rect(self.metrics_surface, (200, 200, 200), panel_rect, 1)
+
+        if not self.metric_series:
+            return
+
+        padding = 16
+        plot_rect = panel_rect.inflate(-2 * padding, -2 * padding)
+
+        all_values = [
+            value
+            for series in self.metric_series.values()
+            for value in series[-plot_rect.width :]
+        ]
+
+        if not all_values:
+            return
+
+        min_value = min(all_values)
+        max_value = max(all_values)
+        value_range = max(max_value - min_value, 1e-5)
+
+        for idx, (name, series) in enumerate(self.metric_series.items()):
+            data = series[-plot_rect.width :]
+            if not data:
+                continue
+
+            color = self.metric_colors[idx % len(self.metric_colors)]
+            points = []
+            for i, value in enumerate(data):
+                x = plot_rect.left + int(i * (plot_rect.width - 1) / max(1, len(data) - 1))
+                y_ratio = (value - min_value) / value_range
+                y = plot_rect.bottom - int(y_ratio * (plot_rect.height - 1))
+                points.append((x, y))
+
+            if len(points) == 1:
+                pygame.draw.circle(self.metrics_surface, color, points[0], 2)
+            else:
+                pygame.draw.lines(self.metrics_surface, color, False, points, 2)
+
+    def _toggle_metrics(self):
+        self.metrics_visible = not self.metrics_visible
+        self._redraw_metrics_surface()
 
     def _ensure_solved_path_surface(self):
         """Render a green overlay for the solved path once available."""
@@ -260,8 +370,11 @@ class LiveMazeViewer:
                         self._change_zoom(0.1)
                     elif event.key in (pygame.K_MINUS, pygame.K_KP_MINUS):
                         self._change_zoom(-0.1)
+                    elif event.key == pygame.K_m:
+                        self._toggle_metrics()
 
             self._drain_updates()
+            self._drain_metrics()
             self._ensure_solved_path_surface()
             self._blit_scaled_surfaces()
             self._draw_agent()
