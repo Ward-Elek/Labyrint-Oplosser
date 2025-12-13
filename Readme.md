@@ -26,14 +26,7 @@ Zorg dat je een recente versie van Python 3 geïnstalleerd hebt.
 
 ## Gebruik
 
-- Start het trainingsscript vanuit de map `Code/task`, bijvoorbeeld:
-
-        cd Code/task
-        python train.py
-
-- Voeg eventueel een script toe om een getraind model te demonstreren, bijvoorbeeld:
-
-        python run_trained_agent.py
+ Hier nog iets toevoegen !
 
 
 ## Doel en aanpak
