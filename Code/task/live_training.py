@@ -1,6 +1,7 @@
 """Run training while streaming live updates to a Pygame viewer."""
 
 import threading
+from collections import deque
 
 import numpy as np
 
@@ -61,13 +62,39 @@ def main():
     viewer = LiveMazeViewer(maze, feasibility)
     training_done = threading.Event()
     episode_metrics = []
+    # Rolling window used for derived metrics. Recreated when starting a new
+    # training run to ensure graphs begin fresh.
+    rolling_window = 50
+    rolling_metrics = deque(maxlen=rolling_window)
 
     def callback(state):
         viewer.enqueue_state(state)
 
     def on_episode(metrics):
+        """Push raw and rolling metrics to the live viewer.
+
+        The rolling window is capped at ``rolling_window`` episodes and is
+        reset when a new training run starts (i.e., when this callback is
+        redefined), ensuring the graphs stay consistent across runs.
+        """
+
         episode_metrics.append(metrics)
-        viewer.enqueue_metrics(metrics)
+        rolling_metrics.append(metrics)
+
+        if rolling_metrics:
+            rewards = [m.get("cumulative_reward", 0.0) for m in rolling_metrics]
+            steps = [m.get("steps", 0) for m in rolling_metrics]
+            successes = [bool(m.get("terminal", False)) for m in rolling_metrics]
+
+            derived_metrics = {
+                "reward (rolling avg)": float(np.mean(rewards)),
+                "steps (rolling avg)": float(np.mean(steps)),
+                "success ratio": float(np.mean(successes)),
+            }
+        else:
+            derived_metrics = {}
+
+        viewer.enqueue_metrics({**metrics, **derived_metrics})
 
     def training_task():
         agent.train(
