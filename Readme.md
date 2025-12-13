@@ -26,8 +26,6 @@ Zorg dat je een recente versie van Python 3 geïnstalleerd hebt.
 
 ## Gebruik
 
-> De exacte bestandsnamen en script-commando’s hangen af van de inhoud van de map `Code/task`. Pas onderstaande aan zodra deze definitief zijn.
-
 - Start het trainingsscript vanuit de map `Code/task`, bijvoorbeeld:
 
         cd Code/task
