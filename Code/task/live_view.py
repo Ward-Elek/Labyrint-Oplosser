@@ -5,7 +5,9 @@ and renders the agent's current position inside the maze as those updates
 arrive.
 """
 
+import datetime
 import queue
+from pathlib import Path
 from typing import Optional
 
 import numpy as np
@@ -371,6 +373,92 @@ class LiveMazeViewer:
 
         self.solved_path_surface = solution_surface
 
+    def _save_maze_view(self, base_dir: Path, timestamp: str):
+        """Persist only the maze portion (including solution and trail) to disk."""
+
+        maze_surface = pygame.Surface((self.maze_width, self.maze_height), pygame.SRCALPHA)
+
+        maze_rect = pygame.Rect(0, 0, self.maze_width, self.maze_height)
+        maze_surface.blit(self.background, (0, 0), maze_rect)
+
+        if self.trail_surface:
+            maze_surface.blit(self.trail_surface, (0, 0), maze_rect)
+        if self.solved_path_surface:
+            maze_surface.blit(self.solved_path_surface, (0, 0), maze_rect)
+
+        if self.current_state is not None:
+            cell = self._state_to_cell(self.current_state)
+            center = self._cell_center(cell)
+            pygame.draw.circle(maze_surface, (0, 0, 255), center, max(1, int(cell_side / 3)))
+
+        maze_path = base_dir / f"maze_solved_{timestamp}.png"
+        pygame.image.save(maze_surface, maze_path)
+
+    def _save_full_metric_plots(self, base_dir: Path, timestamp: str):
+        """Save each metric as its own full-history plot image."""
+
+        if not self.metric_series:
+            return
+
+        padding = 20
+        height = 160
+        minimum_width = 300
+
+        for idx, (name, series) in enumerate(self.metric_series.items()):
+            if not series:
+                continue
+
+            width = max(minimum_width, len(series))
+            surface = pygame.Surface((width, height), pygame.SRCALPHA)
+            surface.fill((255, 255, 255))
+
+            plot_rect = pygame.Rect(padding, padding, width - 2 * padding, height - 2 * padding)
+            pygame.draw.rect(surface, (220, 220, 220), plot_rect, 1)
+
+            min_value = min(series)
+            max_value = max(series)
+            value_range = max(max_value - min_value, 1e-5)
+            color = self.metric_colors[idx % len(self.metric_colors)]
+
+            points = []
+            for i, value in enumerate(series):
+                x = plot_rect.left + int(i * (plot_rect.width - 1) / max(1, len(series) - 1))
+                y_ratio = (value - min_value) / value_range
+                y = plot_rect.bottom - int(y_ratio * (plot_rect.height - 1))
+                points.append((x, y))
+
+            if len(points) == 1:
+                pygame.draw.circle(surface, color, points[0], 2)
+            else:
+                pygame.draw.lines(surface, color, False, points, 2)
+
+            if self.metric_font:
+                label_surface = self.metric_font.render(str(name), True, (60, 60, 60))
+                label_pos = (plot_rect.left, plot_rect.top - self.metric_font.get_height())
+                surface.blit(label_surface, label_pos)
+
+            metrics_path = base_dir / f"metric_{name}_{timestamp}.png"
+            pygame.image.save(surface, metrics_path)
+
+    def _save_final_images(self):
+        """Persist the current maze and metrics views to disk."""
+
+        if not self.screen:
+            return
+
+        base_dir = Path(__file__).resolve().parent
+        timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+
+        # Refresh the composed surface before saving.
+        self._blit_scaled_surfaces()
+        self._draw_agent()
+
+        self._ensure_solved_path_surface()
+        composed_path = base_dir / f"viewer_snapshot_{timestamp}.png"
+        pygame.image.save(self.screen, composed_path)
+        self._save_maze_view(base_dir, timestamp)
+        self._save_full_metric_plots(base_dir, timestamp)
+
     def run(self, completion_event: Optional["threading.Event"] = None, fps: int = 30):
         """Start the rendering loop.
 
@@ -407,4 +495,5 @@ class LiveMazeViewer:
 
             self.clock.tick(fps)
 
+        self._save_final_images()
         pygame.quit()
