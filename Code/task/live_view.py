@@ -5,7 +5,9 @@ and renders the agent's current position inside the maze as those updates
 arrive.
 """
 
+import csv
 import datetime
+import json
 import queue
 from pathlib import Path
 from typing import Optional
@@ -361,6 +363,10 @@ class LiveMazeViewer:
         if not self.metric_series:
             return
 
+        metric_items = [item for item in self.metric_series.items() if item[1]]
+        if not metric_items:
+            return
+
         width, height = 640, 360
         padding = 40
         plot_left = padding
@@ -368,7 +374,7 @@ class LiveMazeViewer:
         plot_right = width - padding
         plot_bottom = height - padding
 
-        for idx, (name, series) in enumerate(self.metric_series.items()):
+        for idx, (name, series) in enumerate(metric_items):
             if not series:
                 continue
 
@@ -406,6 +412,40 @@ class LiveMazeViewer:
             safe_name = self._sanitize_metric_name(str(name))
             metric_path = base_dir / f"metric_{safe_name}_{timestamp}.png"
             img.save(metric_path)
+
+        self._export_metric_series_csv_and_json(base_dir, timestamp, metric_items)
+
+    def _export_metric_series_csv_and_json(
+        self, base_dir: Path, timestamp: str, metric_items: list[tuple[str, list[float]]]
+    ):
+        max_len = max(len(series) for _, series in metric_items)
+        if max_len == 0:
+            return
+
+        csv_path = base_dir / f"metric_series_{timestamp}.csv"
+        json_path = base_dir / f"metric_series_{timestamp}.json"
+
+        fieldnames = ["episode"] + [name for name, _ in metric_items]
+        with csv_path.open("w", newline="", encoding="utf-8") as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            for episode in range(1, max_len + 1):
+                row = {"episode": episode}
+                for name, series in metric_items:
+                    row[name] = series[episode - 1] if episode - 1 < len(series) else ""
+                writer.writerow(row)
+
+        json_payload = []
+        for episode in range(1, max_len + 1):
+            entry = {"episode": episode}
+            for name, series in metric_items:
+                entry[name] = series[episode - 1] if episode - 1 < len(series) else None
+            json_payload.append(entry)
+
+        with json_path.open("w", encoding="utf-8") as jsonfile:
+            json.dump(json_payload, jsonfile, ensure_ascii=False, indent=2)
+
+        print(f"Saved metric series to {csv_path} and {json_path}")
 
     def _ensure_solved_path_surface(self):
         """Render a green overlay for the solved path once available."""
