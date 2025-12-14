@@ -472,7 +472,7 @@ class LiveMazeViewer:
         if not self.screen:
             return
 
-        base_dir = Path(__file__).resolve().parents[2] / "Media"
+        base_dir = Path(__file__).resolve().parents[2] / "data"
         base_dir.mkdir(parents=True, exist_ok=True)
 
         for pattern in ("*.png", "*.csv", "*.json"):

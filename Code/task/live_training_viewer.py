@@ -84,12 +84,10 @@ def main():
         if rolling_metrics:
             rewards = [m.get("cumulative_reward", 0.0) for m in rolling_metrics]
             steps = [m.get("steps", 0) for m in rolling_metrics]
-            successes = [bool(m.get("terminal", False)) for m in rolling_metrics]
 
             derived_metrics = {
                 "reward (rolling avg)": float(np.mean(rewards)),
                 "steps (rolling avg)": float(np.mean(steps)),
-                "success ratio": float(np.mean(successes)),
             }
         else:
             derived_metrics = {}

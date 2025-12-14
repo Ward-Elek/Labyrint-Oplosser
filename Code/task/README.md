@@ -116,7 +116,7 @@ Deze map bevat alle Python bestanden voor het Labyrint-Oplosser project. Dit pro
 
 ### Hoofdprogramma's
 
-#### `main.py`
+#### `maze_maker.py`
 **Doel:** Simpel startpunt voor het project - genereert alleen een labyrint.
 
 **Belangrijkste functionaliteit:**
@@ -128,7 +128,7 @@ Deze map bevat alle Python bestanden voor het Labyrint-Oplosser project. Dit pro
 
 ---
 
-#### `final_run.py`
+#### `train_and_solve.py`
 **Doel:** Volledige pipeline voor training en visualisatie van de oplossing.
 
 **Belangrijkste functionaliteit:**
@@ -143,7 +143,7 @@ Deze map bevat alle Python bestanden voor het Labyrint-Oplosser project. Dit pro
 
 ---
 
-#### `live_training.py`
+#### `live_training_viewer.py`
 **Doel:** Toont het trainingsproces live terwijl de agent leert.
 
 **Belangrijkste functionaliteit:**
@@ -175,15 +175,15 @@ Deze map bevat alle Python bestanden voor het Labyrint-Oplosser project. Dit pro
 
 ## Hoe te gebruiken
 
-### `main.py`
+### `maze_maker.py`
 - **Gebruikersinput:** Labyrintdimensies (`x y`) en startcoördinaten (`x y`). Validatie zorgt dat waarden positief zijn en binnen het raster vallen.
 - **Resultaten:** Genereert een labyrint en slaat een PNG op (standaard `maze.png`) in dezelfde map.
 
-### `final_run.py`
+### `train_and_solve.py`
 - **Gebruikersinput:** Labyrintdimensies, startcoördinaten, gamma en learning rate. Er worden 1000 episodes getraind.
 - **Resultaten:** Print F- en Q-matrices in de terminal en toont de opgeloste route in een Pygame-venster. Er worden geen bestanden opgeslagen; sluit het venster om het script af te ronden.
 
-### `live_training.py`
+### `live_training_viewer.py`
 - **Gebruikersinput:** Labyrintdimensies, startcoördinaten, gamma en learning rate.
 - **Resultaten:** Start training in een thread, streamt states en metrics live naar de viewer (met rolling gemiddelde statistieken). Geeft het gevonden pad weer zodra training klaar is. Geen bestand-uitvoer.
 
