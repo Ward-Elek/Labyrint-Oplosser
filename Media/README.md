@@ -1,6 +1,6 @@
 # Metrics-overzicht
 
-Deze map bevat de geëxporteerde visualisaties die na een trainingsrun zijn gegenereerd. Onderstaande toelichting beschrijft wat je normaal gesproken in elke grafiek zou moeten zien en hoe je de waardes kunt interpreteren.
+Deze map bevat eerder geëxporteerde visualisaties die na een trainingsrun zijn gegenereerd. Nieuwe runs worden nu weggeschreven naar de map `data/`. Onderstaande toelichting beschrijft wat je in de grafieken ziet en hoe je de waardes kunt interpreteren.
 
 ## Overzicht van de grafieken
 
@@ -19,9 +19,6 @@ Het voortschrijdend gemiddelde van het aantal stappen. Deze grafiek filtert piek
 ### `metric_epsilon_YYYYMMDD_HHMMSS.png`
 Visualiseert de epsilon-waarde van ε-greedy verkenning. Gewoonlijk start epsilon dicht bij 1 (veel verkenning) en daalt richting 0 (meer exploitatie). Een vloeiende, afnemende lijn betekent dat de agent geleidelijk meer vertrouwt op de geleerde strategie.
 
-### `metric_success_ratio_YYYYMMDD_HHMMSS.png`
-Toont het percentage episodes waarin het doel is bereikt. De waarde loopt van 0 tot 1. Een stijgende curve richting 1 geeft aan dat de agent bijna altijd het einde haalt. Een dalende of instabiele lijn kan betekenen dat de agent nog niet stabiel presteert.
-
 ### `metrics_panel_YYYYMMDD_HHMMSS.png`
 Een compositie van alle metriekplots boven elkaar, handig om correlaties te zien (bijvoorbeeld of een dalende epsilon samenvalt met stijgende beloning en dalende stappen).
 
@@ -29,10 +26,10 @@ Een compositie van alle metriekplots boven elkaar, handig om correlaties te zien
 - `metric_series_YYYYMMDD_HHMMSS.csv`
 - `metric_series_YYYYMMDD_HHMMSS.json`
 
-Deze bestanden bevatten dezelfde gegevens als de grafieken, zodat je ze kunt hergebruiken voor verdere analyse of om aangepaste grafieken te maken. De kolommen tonen per episode onder andere `cumulative_reward`, `reward (rolling avg)`, `steps`, `steps (rolling avg)`, `epsilon` en `success ratio`.
+Deze bestanden bevatten dezelfde gegevens als de grafieken, zodat je ze kunt hergebruiken voor verdere analyse of om aangepaste grafieken te maken. De kolommen tonen per episode onder andere `cumulative_reward`, `reward (rolling avg)`, `steps`, `steps (rolling avg)` en `epsilon`.
 
 ## Hoe de grafieken te lezen
-- **Stabiele vooruitgang**: stijgende beloning + success ratio richting 1, terwijl stappen dalen of stabiliseren.
+- **Stabiele vooruitgang**: stijgende beloning terwijl stappen dalen of stabiliseren.
 - **Te veel verkenning**: hoge epsilon gecombineerd met wisselende beloningen en veel stappen; stel eventueel een sneller afbouwschema in.
 - **Plateau**: vlakke beloningscurves en stabiele, maar niet optimale stappenwaarden; experimenteer met leerparameters of beloningsfunctie.
 

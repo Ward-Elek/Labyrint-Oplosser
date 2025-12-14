@@ -4,8 +4,8 @@ Dit project onderzoekt hoe een AI een labyrint kan oplossen met behulp van Pytho
 
 ## Projectstructuur
 
-- `Code/task`: Bevat de Python-code voor het genereren van labyrinten, de agent en de trainingslogica. 
-- `Media`: Bevat voorbeeldafbeeldingen of andere media die het gedrag van de agent illustreren.  
+- `Code/task`: Bevat de Python-code voor het genereren van labyrinten, de agent en de trainingslogica.
+- `data`: Bevat geëxporteerde afbeeldingen en metriekbestanden die tijdens sessies zijn opgeslagen.
 - `requirements.txt`: Lijst met alle Python-dependencies die nodig zijn om het project uit te voeren.  
 
 ## Installatie
@@ -31,19 +31,19 @@ Zorg dat je een recente versie van Python 3 geïnstalleerd hebt.
 
    - **Laatste getrainde agent draaien**:
      ```bash
-     python Code/task/final_run.py
+     python Code/task/train_and_solve.py
      ```
      Dit opent een Pygame-venster waarin de agent een labyrint probeert op te lossen. Je ziet de animatie van het pad en eventuele statusmeldingen in de terminal.
 
    - **Live training uitvoeren**:
      ```bash
-     python Code/task/live_training.py
+     python Code/task/live_training_viewer.py
      ```
      Start de trainingslus met visualisatie. Je krijgt een Pygame-venster met de actuele positie van de agent, plus trainingsstatistieken in de console.
 
    - **Labyrint-generatie of alternatieve run**:
      ```bash
-     python Code/task/main.py
+     python Code/task/maze_maker.py
      ```
      Voert de standaardlogica uit voor het genereren en oplossen van een labyrint. Ook hier verschijnt een Pygame-venster met de doolhofvisualisatie.
 
