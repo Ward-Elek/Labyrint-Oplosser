@@ -2,6 +2,19 @@
 
 Deze map bevat alle Python bestanden voor het Labyrint-Oplosser project. Dit project gebruikt Q-learning (reinforcement learning) om labyrints automatisch op te lossen.
 
+## Setup
+
+1. Gebruik Python 3.10 of hoger.
+2. Maak en activeer een virtualenv in deze `task`-map:
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+3. Installeer de afhankelijkheden:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
 ## Overzicht van de bestanden
 
 ### Kern modules
@@ -162,26 +175,32 @@ Deze map bevat alle Python bestanden voor het Labyrint-Oplosser project. Dit pro
 
 ## Hoe te gebruiken
 
-### Voor een snelle demonstratie:
-```bash
-python final_run.py
-```
+### `main.py`
+- **Gebruikersinput:** Labyrintdimensies (`x y`) en startcoördinaten (`x y`). Validatie zorgt dat waarden positief zijn en binnen het raster vallen.
+- **Resultaten:** Genereert een labyrint en slaat een PNG op (standaard `maze.png`) in dezelfde map.
 
-### Om live training te zien:
-```bash
-python live_training.py
-```
+### `final_run.py`
+- **Gebruikersinput:** Labyrintdimensies, startcoördinaten, gamma en learning rate. Er worden 1000 episodes getraind.
+- **Resultaten:** Print F- en Q-matrices in de terminal en toont de opgeloste route in een Pygame-venster. Er worden geen bestanden opgeslagen; sluit het venster om het script af te ronden.
 
-### Om alleen een labyrint te genereren:
-```bash
-python main.py
-```
+### `live_training.py`
+- **Gebruikersinput:** Labyrintdimensies, startcoördinaten, gamma en learning rate.
+- **Resultaten:** Start training in een thread, streamt states en metrics live naar de viewer (met rolling gemiddelde statistieken). Geeft het gevonden pad weer zodra training klaar is. Geen bestand-uitvoer.
+
+Voor alle scripts geldt: voer ze uit vanuit de `Code/task`-map zodat relatieve paden (zoals `maze.png`) kloppen.
 
 ## Dependencies
 - numpy
 - pandas
 - PIL (Pillow)
-- pygame
+- pygame (vereist werkende grafische omgeving/SDL-driver)
+- wrapt_timeout_decorator
+
+### Bekende afhankelijkheden en valkuilen
+- Pygame heeft een beschikbare display-driver nodig; op headless servers kan het nodig zijn om een virtuele display (bijv. `SDL_VIDEODRIVER=dummy`) te configureren.
+- PIL/Pillow gebruikt systeembibliotheken voor beeldverwerking; zorg dat standaard build-dependencies aanwezig zijn als installatie faalt.
+- Scripts lezen gebruikersinput vanaf stdin; voer ze in een interactief shell-venster uit.
+- De viewer-sluiter bepaalt de scripts; sluit het Pygame-venster om processen netjes te beëindigen.
 
 ## Q-learning Parameters
 
