@@ -43,6 +43,10 @@ class Agent:
             neighbor_idx = feasibility.numbered_grid[neighbor.x, neighbor.y]
             self.R[neighbor_idx, self.goal] = 1000.0
 
+        terminal_states = np.where(np.sum(feasibility.F_matrix, axis=1) == 0)[0]
+        for state in terminal_states:
+            self.R[state, state] = 0.0
+
     def train(
         self,
         F,
@@ -126,12 +130,10 @@ class Agent:
 
                 poss_next_next_states = get_possible_next_states(next_state, F, self.n_states)
 
-                max_Q = -9999.99
-                for j in range(len(poss_next_next_states)):
-                    nn_s = poss_next_next_states[j]
-                    q = self.Q[next_state, nn_s]
-                    if q > max_Q:
-                        max_Q = q
+                if poss_next_next_states:
+                    max_Q = max(self.Q[next_state, nn_s] for nn_s in poss_next_next_states)
+                else:
+                    max_Q = 0.0
                 # Bellman's equation: Q = [(1 - alpha) * Q]  +  [alpha * (reward + (gamma * maxQ))]
                 # Update the Q matrix
                 reward = self.R[curr_state][next_state]
