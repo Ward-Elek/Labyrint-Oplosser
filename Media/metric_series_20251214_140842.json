@@ -1,0 +1,6914 @@
+[
+  {
+    "episode": 1,
+    "cumulative_reward": 858.3000000000038,
+    "steps": 1418.0,
+    "epsilon": 1.0,
+    "reward (rolling avg)": 858.3000000000038,
+    "steps (rolling avg)": 1418.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 2,
+    "cumulative_reward": 979.9,
+    "steps": 202.0,
+    "epsilon": 0.99,
+    "reward (rolling avg)": 919.100000000002,
+    "steps (rolling avg)": 810.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 3,
+    "cumulative_reward": 979.9,
+    "steps": 202.0,
+    "epsilon": 0.9801,
+    "reward (rolling avg)": 939.366666666668,
+    "steps (rolling avg)": 607.3333333333334,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 4,
+    "cumulative_reward": 944.4999999999994,
+    "steps": 556.0,
+    "epsilon": 0.9702989999999999,
+    "reward (rolling avg)": 940.6500000000009,
+    "steps (rolling avg)": 594.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 5,
+    "cumulative_reward": 978.5,
+    "steps": 216.0,
+    "epsilon": 0.96059601,
+    "reward (rolling avg)": 948.2200000000008,
+    "steps (rolling avg)": 518.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 6,
+    "cumulative_reward": 982.9,
+    "steps": 172.0,
+    "epsilon": 0.9509900498999999,
+    "reward (rolling avg)": 954.0000000000006,
+    "steps (rolling avg)": 461.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 7,
+    "cumulative_reward": 978.0999999999999,
+    "steps": 220.0,
+    "epsilon": 0.9414801494009999,
+    "reward (rolling avg)": 957.4428571428577,
+    "steps (rolling avg)": 426.57142857142856,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 8,
+    "cumulative_reward": 990.3000000000001,
+    "steps": 98.0,
+    "epsilon": 0.9320653479069899,
+    "reward (rolling avg)": 961.5500000000004,
+    "steps (rolling avg)": 385.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 9,
+    "cumulative_reward": 961.6999999999997,
+    "steps": 384.0,
+    "epsilon": 0.92274469442792,
+    "reward (rolling avg)": 961.566666666667,
+    "steps (rolling avg)": 385.3333333333333,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 10,
+    "cumulative_reward": 968.0999999999998,
+    "steps": 320.0,
+    "epsilon": 0.9135172474836407,
+    "reward (rolling avg)": 962.2200000000003,
+    "steps (rolling avg)": 378.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 11,
+    "cumulative_reward": 986.5,
+    "steps": 136.0,
+    "epsilon": 0.9043820750088043,
+    "reward (rolling avg)": 964.4272727272729,
+    "steps (rolling avg)": 356.72727272727275,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 12,
+    "cumulative_reward": 985.3000000000001,
+    "steps": 148.0,
+    "epsilon": 0.8953382542587163,
+    "reward (rolling avg)": 966.1666666666669,
+    "steps (rolling avg)": 339.3333333333333,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 13,
+    "cumulative_reward": 965.6999999999998,
+    "steps": 344.0,
+    "epsilon": 0.8863848717161291,
+    "reward (rolling avg)": 966.1307692307693,
+    "steps (rolling avg)": 339.6923076923077,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 14,
+    "cumulative_reward": 980.9,
+    "steps": 192.0,
+    "epsilon": 0.8775210229989678,
+    "reward (rolling avg)": 967.1857142857143,
+    "steps (rolling avg)": 329.14285714285717,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 15,
+    "cumulative_reward": 990.5,
+    "steps": 96.0,
+    "epsilon": 0.8687458127689781,
+    "reward (rolling avg)": 968.74,
+    "steps (rolling avg)": 313.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 16,
+    "cumulative_reward": 995.9,
+    "steps": 42.0,
+    "epsilon": 0.8600583546412883,
+    "reward (rolling avg)": 970.4375000000002,
+    "steps (rolling avg)": 296.625,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 17,
+    "cumulative_reward": 995.3,
+    "steps": 48.0,
+    "epsilon": 0.8514577710948754,
+    "reward (rolling avg)": 971.9000000000002,
+    "steps (rolling avg)": 282.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 18,
+    "cumulative_reward": 988.9,
+    "steps": 112.0,
+    "epsilon": 0.8429431933839266,
+    "reward (rolling avg)": 972.8444444444447,
+    "steps (rolling avg)": 272.55555555555554,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 19,
+    "cumulative_reward": 993.1,
+    "steps": 70.0,
+    "epsilon": 0.8345137614500874,
+    "reward (rolling avg)": 973.9105263157896,
+    "steps (rolling avg)": 261.89473684210526,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 20,
+    "cumulative_reward": 995.7,
+    "steps": 44.0,
+    "epsilon": 0.8261686238355865,
+    "reward (rolling avg)": 975.0000000000002,
+    "steps (rolling avg)": 251.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 21,
+    "cumulative_reward": 980.1,
+    "steps": 200.0,
+    "epsilon": 0.8179069375972307,
+    "reward (rolling avg)": 975.2428571428572,
+    "steps (rolling avg)": 248.57142857142858,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 22,
+    "cumulative_reward": 995.3,
+    "steps": 48.0,
+    "epsilon": 0.8097278682212583,
+    "reward (rolling avg)": 976.1545454545455,
+    "steps (rolling avg)": 239.45454545454547,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 23,
+    "cumulative_reward": 994.7,
+    "steps": 54.0,
+    "epsilon": 0.8016305895390458,
+    "reward (rolling avg)": 976.9608695652175,
+    "steps (rolling avg)": 231.3913043478261,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 24,
+    "cumulative_reward": 995.7,
+    "steps": 44.0,
+    "epsilon": 0.7936142836436553,
+    "reward (rolling avg)": 977.7416666666668,
+    "steps (rolling avg)": 223.58333333333334,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 25,
+    "cumulative_reward": 990.1,
+    "steps": 100.0,
+    "epsilon": 0.7856781408072188,
+    "reward (rolling avg)": 978.2360000000001,
+    "steps (rolling avg)": 218.64,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 26,
+    "cumulative_reward": 996.7,
+    "steps": 34.0,
+    "epsilon": 0.7778213593991465,
+    "reward (rolling avg)": 978.946153846154,
+    "steps (rolling avg)": 211.53846153846155,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 27,
+    "cumulative_reward": 991.3000000000001,
+    "steps": 88.0,
+    "epsilon": 0.7700431458051551,
+    "reward (rolling avg)": 979.4037037037037,
+    "steps (rolling avg)": 206.96296296296296,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 28,
+    "cumulative_reward": 991.3000000000001,
+    "steps": 88.0,
+    "epsilon": 0.7623427143471035,
+    "reward (rolling avg)": 979.8285714285714,
+    "steps (rolling avg)": 202.71428571428572,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 29,
+    "cumulative_reward": -603.8999999996367,
+    "steps": 16040.0,
+    "epsilon": 0.7547192872036325,
+    "reward (rolling avg)": 925.2172413793229,
+    "steps (rolling avg)": 748.8275862068965,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 30,
+    "cumulative_reward": 994.9,
+    "steps": 52.0,
+    "epsilon": 0.7471720943315961,
+    "reward (rolling avg)": 927.5400000000121,
+    "steps (rolling avg)": 725.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 31,
+    "cumulative_reward": 993.5,
+    "steps": 66.0,
+    "epsilon": 0.7397003733882802,
+    "reward (rolling avg)": 929.6677419354957,
+    "steps (rolling avg)": 704.3225806451613,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 32,
+    "cumulative_reward": 992.9,
+    "steps": 72.0,
+    "epsilon": 0.7323033696543974,
+    "reward (rolling avg)": 931.6437500000116,
+    "steps (rolling avg)": 684.5625,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 33,
+    "cumulative_reward": 990.5,
+    "steps": 96.0,
+    "epsilon": 0.7249803359578534,
+    "reward (rolling avg)": 933.4272727272839,
+    "steps (rolling avg)": 666.7272727272727,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 34,
+    "cumulative_reward": 994.5,
+    "steps": 56.0,
+    "epsilon": 0.7177305325982748,
+    "reward (rolling avg)": 935.2235294117755,
+    "steps (rolling avg)": 648.7647058823529,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 35,
+    "cumulative_reward": 992.5,
+    "steps": 76.0,
+    "epsilon": 0.7105532272722921,
+    "reward (rolling avg)": 936.8600000000106,
+    "steps (rolling avg)": 632.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 36,
+    "cumulative_reward": 994.1,
+    "steps": 60.0,
+    "epsilon": 0.7034476949995692,
+    "reward (rolling avg)": 938.4500000000103,
+    "steps (rolling avg)": 616.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 37,
+    "cumulative_reward": 992.1,
+    "steps": 80.0,
+    "epsilon": 0.6964132180495735,
+    "reward (rolling avg)": 939.9000000000099,
+    "steps (rolling avg)": 602.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 38,
+    "cumulative_reward": 989.3000000000001,
+    "steps": 108.0,
+    "epsilon": 0.6894490858690777,
+    "reward (rolling avg)": 941.2000000000097,
+    "steps (rolling avg)": 589.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 39,
+    "cumulative_reward": 995.9,
+    "steps": 42.0,
+    "epsilon": 0.682554595010387,
+    "reward (rolling avg)": 942.6025641025736,
+    "steps (rolling avg)": 574.974358974359,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 40,
+    "cumulative_reward": 994.3,
+    "steps": 58.0,
+    "epsilon": 0.6757290490602831,
+    "reward (rolling avg)": 943.8950000000092,
+    "steps (rolling avg)": 562.05,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 41,
+    "cumulative_reward": 996.9,
+    "steps": 32.0,
+    "epsilon": 0.6689717585696803,
+    "reward (rolling avg)": 945.1878048780577,
+    "steps (rolling avg)": 549.1219512195122,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 42,
+    "cumulative_reward": 994.7,
+    "steps": 54.0,
+    "epsilon": 0.6622820409839835,
+    "reward (rolling avg)": 946.3666666666753,
+    "steps (rolling avg)": 537.3333333333334,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 43,
+    "cumulative_reward": 993.5,
+    "steps": 66.0,
+    "epsilon": 0.6556592205741436,
+    "reward (rolling avg)": 947.4627906976829,
+    "steps (rolling avg)": 526.3720930232558,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 44,
+    "cumulative_reward": 994.7,
+    "steps": 54.0,
+    "epsilon": 0.6491026283684022,
+    "reward (rolling avg)": 948.5363636363719,
+    "steps (rolling avg)": 515.6363636363636,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 45,
+    "cumulative_reward": 992.9,
+    "steps": 72.0,
+    "epsilon": 0.6426116020847181,
+    "reward (rolling avg)": 949.5222222222303,
+    "steps (rolling avg)": 505.77777777777777,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 46,
+    "cumulative_reward": 995.1,
+    "steps": 50.0,
+    "epsilon": 0.6361854860638709,
+    "reward (rolling avg)": 950.5130434782687,
+    "steps (rolling avg)": 495.8695652173913,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 47,
+    "cumulative_reward": 993.7,
+    "steps": 64.0,
+    "epsilon": 0.6298236312032323,
+    "reward (rolling avg)": 951.4319148936247,
+    "steps (rolling avg)": 486.6808510638298,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 48,
+    "cumulative_reward": 993.9,
+    "steps": 62.0,
+    "epsilon": 0.6235253948912,
+    "reward (rolling avg)": 952.3166666666742,
+    "steps (rolling avg)": 477.8333333333333,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 49,
+    "cumulative_reward": 995.3,
+    "steps": 48.0,
+    "epsilon": 0.617290140942288,
+    "reward (rolling avg)": 953.1938775510279,
+    "steps (rolling avg)": 469.0612244897959,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 50,
+    "cumulative_reward": 992.5,
+    "steps": 76.0,
+    "epsilon": 0.6111172395328651,
+    "reward (rolling avg)": 953.9800000000073,
+    "steps (rolling avg)": 461.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 51,
+    "cumulative_reward": 996.3,
+    "steps": 38.0,
+    "epsilon": 0.6050060671375365,
+    "reward (rolling avg)": 956.7400000000073,
+    "steps (rolling avg)": 433.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 52,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.5989560064661611,
+    "reward (rolling avg)": 957.0920000000073,
+    "steps (rolling avg)": 430.08,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 53,
+    "cumulative_reward": 994.1,
+    "steps": 60.0,
+    "epsilon": 0.5929664464014994,
+    "reward (rolling avg)": 957.3760000000071,
+    "steps (rolling avg)": 427.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 54,
+    "cumulative_reward": 996.9,
+    "steps": 32.0,
+    "epsilon": 0.5870367819374844,
+    "reward (rolling avg)": 958.4240000000073,
+    "steps (rolling avg)": 416.76,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 55,
+    "cumulative_reward": 995.5,
+    "steps": 46.0,
+    "epsilon": 0.5811664141181095,
+    "reward (rolling avg)": 958.7640000000072,
+    "steps (rolling avg)": 413.36,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 56,
+    "cumulative_reward": 995.3,
+    "steps": 48.0,
+    "epsilon": 0.5753547499769285,
+    "reward (rolling avg)": 959.0120000000072,
+    "steps (rolling avg)": 410.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 57,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.5696012024771592,
+    "reward (rolling avg)": 959.3960000000073,
+    "steps (rolling avg)": 407.04,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 58,
+    "cumulative_reward": 996.5,
+    "steps": 36.0,
+    "epsilon": 0.5639051904523876,
+    "reward (rolling avg)": 959.5200000000073,
+    "steps (rolling avg)": 405.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 59,
+    "cumulative_reward": 996.9,
+    "steps": 32.0,
+    "epsilon": 0.5582661385478638,
+    "reward (rolling avg)": 960.2240000000073,
+    "steps (rolling avg)": 398.76,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 60,
+    "cumulative_reward": 992.9,
+    "steps": 72.0,
+    "epsilon": 0.5526834771623851,
+    "reward (rolling avg)": 960.7200000000073,
+    "steps (rolling avg)": 393.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 61,
+    "cumulative_reward": 995.9,
+    "steps": 42.0,
+    "epsilon": 0.5471566423907612,
+    "reward (rolling avg)": 960.9080000000074,
+    "steps (rolling avg)": 391.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 62,
+    "cumulative_reward": -974.2999999992999,
+    "steps": 19744.0,
+    "epsilon": 0.5416850759668536,
+    "reward (rolling avg)": 921.7160000000213,
+    "steps (rolling avg)": 783.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 63,
+    "cumulative_reward": 996.1,
+    "steps": 40.0,
+    "epsilon": 0.536268225207185,
+    "reward (rolling avg)": 922.3240000000212,
+    "steps (rolling avg)": 777.76,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 64,
+    "cumulative_reward": 995.7,
+    "steps": 44.0,
+    "epsilon": 0.5309055429551132,
+    "reward (rolling avg)": 922.6200000000212,
+    "steps (rolling avg)": 774.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 65,
+    "cumulative_reward": 995.1,
+    "steps": 50.0,
+    "epsilon": 0.525596487525562,
+    "reward (rolling avg)": 922.7120000000212,
+    "steps (rolling avg)": 773.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 66,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.5203405226503064,
+    "reward (rolling avg)": 922.7480000000213,
+    "steps (rolling avg)": 773.52,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 67,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.5151371174238033,
+    "reward (rolling avg)": 922.7880000000212,
+    "steps (rolling avg)": 773.12,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 68,
+    "cumulative_reward": 993.9,
+    "steps": 62.0,
+    "epsilon": 0.5099857462495653,
+    "reward (rolling avg)": 922.8880000000213,
+    "steps (rolling avg)": 772.12,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 69,
+    "cumulative_reward": 995.5,
+    "steps": 46.0,
+    "epsilon": 0.5048858887870696,
+    "reward (rolling avg)": 922.9360000000213,
+    "steps (rolling avg)": 771.64,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 70,
+    "cumulative_reward": 646.199999999988,
+    "steps": 3539.0,
+    "epsilon": 0.4998370298991989,
+    "reward (rolling avg)": 915.9460000000212,
+    "steps (rolling avg)": 841.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 71,
+    "cumulative_reward": 995.3,
+    "steps": 48.0,
+    "epsilon": 0.49483865960020695,
+    "reward (rolling avg)": 916.2500000000211,
+    "steps (rolling avg)": 838.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 72,
+    "cumulative_reward": 994.9,
+    "steps": 52.0,
+    "epsilon": 0.4898902730042049,
+    "reward (rolling avg)": 916.2420000000212,
+    "steps (rolling avg)": 838.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 73,
+    "cumulative_reward": 995.9,
+    "steps": 42.0,
+    "epsilon": 0.48499137027416284,
+    "reward (rolling avg)": 916.2660000000211,
+    "steps (rolling avg)": 838.34,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 74,
+    "cumulative_reward": 996.3,
+    "steps": 38.0,
+    "epsilon": 0.4801414565714212,
+    "reward (rolling avg)": 916.2780000000212,
+    "steps (rolling avg)": 838.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 75,
+    "cumulative_reward": 996.3,
+    "steps": 38.0,
+    "epsilon": 0.475340042005707,
+    "reward (rolling avg)": 916.4020000000212,
+    "steps (rolling avg)": 836.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 76,
+    "cumulative_reward": 995.7,
+    "steps": 44.0,
+    "epsilon": 0.47058664158564995,
+    "reward (rolling avg)": 916.3820000000211,
+    "steps (rolling avg)": 837.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 77,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.4658807751697934,
+    "reward (rolling avg)": 916.5020000000211,
+    "steps (rolling avg)": 835.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 78,
+    "cumulative_reward": 996.1,
+    "steps": 40.0,
+    "epsilon": 0.4612219674180955,
+    "reward (rolling avg)": 916.5980000000211,
+    "steps (rolling avg)": 835.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 79,
+    "cumulative_reward": 996.3,
+    "steps": 38.0,
+    "epsilon": 0.45660974774391455,
+    "reward (rolling avg)": 948.6020000000138,
+    "steps (rolling avg)": 514.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 80,
+    "cumulative_reward": 995.3,
+    "steps": 48.0,
+    "epsilon": 0.4520436502664754,
+    "reward (rolling avg)": 948.610000000014,
+    "steps (rolling avg)": 514.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 81,
+    "cumulative_reward": 825.9000000000055,
+    "steps": 1742.0,
+    "epsilon": 0.44752321376381066,
+    "reward (rolling avg)": 945.258000000014,
+    "steps (rolling avg)": 548.42,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 82,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.44304798162617254,
+    "reward (rolling avg)": 945.350000000014,
+    "steps (rolling avg)": 547.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 83,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.4386175018099108,
+    "reward (rolling avg)": 945.4900000000139,
+    "steps (rolling avg)": 546.1,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 84,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.4342313267918117,
+    "reward (rolling avg)": 945.5420000000139,
+    "steps (rolling avg)": 545.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 85,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.4298890135238936,
+    "reward (rolling avg)": 945.6340000000138,
+    "steps (rolling avg)": 544.66,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 86,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.42559012338865465,
+    "reward (rolling avg)": 945.7020000000138,
+    "steps (rolling avg)": 543.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 87,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.4213342221547681,
+    "reward (rolling avg)": 945.8060000000139,
+    "steps (rolling avg)": 542.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 88,
+    "cumulative_reward": 995.1,
+    "steps": 50.0,
+    "epsilon": 0.41712087993322045,
+    "reward (rolling avg)": 945.9220000000139,
+    "steps (rolling avg)": 541.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 89,
+    "cumulative_reward": 996.5,
+    "steps": 36.0,
+    "epsilon": 0.41294967113388825,
+    "reward (rolling avg)": 945.9340000000137,
+    "steps (rolling avg)": 541.66,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 90,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.40882017442254937,
+    "reward (rolling avg)": 945.9940000000139,
+    "steps (rolling avg)": 541.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 91,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.4047319726783239,
+    "reward (rolling avg)": 946.0020000000139,
+    "steps (rolling avg)": 540.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 92,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.40068465295154065,
+    "reward (rolling avg)": 946.062000000014,
+    "steps (rolling avg)": 540.38,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 93,
+    "cumulative_reward": 996.9,
+    "steps": 32.0,
+    "epsilon": 0.39667780642202527,
+    "reward (rolling avg)": 946.1300000000139,
+    "steps (rolling avg)": 539.7,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 94,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.392711028357805,
+    "reward (rolling avg)": 946.1860000000139,
+    "steps (rolling avg)": 539.14,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 95,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.38878391807422696,
+    "reward (rolling avg)": 946.2740000000139,
+    "steps (rolling avg)": 538.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 96,
+    "cumulative_reward": 994.9,
+    "steps": 52.0,
+    "epsilon": 0.3848960788934847,
+    "reward (rolling avg)": 946.2700000000141,
+    "steps (rolling avg)": 538.3,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 97,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.38104711810454983,
+    "reward (rolling avg)": 946.3460000000139,
+    "steps (rolling avg)": 537.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 98,
+    "cumulative_reward": 996.7,
+    "steps": 34.0,
+    "epsilon": 0.37723664692350434,
+    "reward (rolling avg)": 946.4020000000138,
+    "steps (rolling avg)": 536.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 99,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.37346428045426927,
+    "reward (rolling avg)": 946.4500000000137,
+    "steps (rolling avg)": 536.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 100,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.36972963764972655,
+    "reward (rolling avg)": 946.5420000000138,
+    "steps (rolling avg)": 535.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 101,
+    "cumulative_reward": 708.9000000000024,
+    "steps": 2912.0,
+    "epsilon": 0.36603234127322926,
+    "reward (rolling avg)": 940.794000000014,
+    "steps (rolling avg)": 593.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 102,
+    "cumulative_reward": 996.5,
+    "steps": 36.0,
+    "epsilon": 0.36237201786049694,
+    "reward (rolling avg)": 940.7740000000139,
+    "steps (rolling avg)": 593.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 103,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.358748297681892,
+    "reward (rolling avg)": 940.842000000014,
+    "steps (rolling avg)": 592.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 104,
+    "cumulative_reward": 996.7,
+    "steps": 34.0,
+    "epsilon": 0.35516081470507305,
+    "reward (rolling avg)": 940.8380000000138,
+    "steps (rolling avg)": 592.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 105,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.3516092065580223,
+    "reward (rolling avg)": 940.8820000000138,
+    "steps (rolling avg)": 592.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 106,
+    "cumulative_reward": 996.7,
+    "steps": 34.0,
+    "epsilon": 0.34809311449244207,
+    "reward (rolling avg)": 940.9100000000138,
+    "steps (rolling avg)": 591.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 107,
+    "cumulative_reward": 996.9,
+    "steps": 32.0,
+    "epsilon": 0.34461218334751764,
+    "reward (rolling avg)": 940.9020000000139,
+    "steps (rolling avg)": 591.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 108,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.34116606151404244,
+    "reward (rolling avg)": 940.9140000000139,
+    "steps (rolling avg)": 591.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 109,
+    "cumulative_reward": 996.5,
+    "steps": 36.0,
+    "epsilon": 0.337754400898902,
+    "reward (rolling avg)": 940.9060000000139,
+    "steps (rolling avg)": 591.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 110,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.334376856889913,
+    "reward (rolling avg)": 941.0060000000138,
+    "steps (rolling avg)": 590.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 111,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.33103308832101386,
+    "reward (rolling avg)": 941.0460000000139,
+    "steps (rolling avg)": 590.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 112,
+    "cumulative_reward": 996.9,
+    "steps": 32.0,
+    "epsilon": 0.3277227574378037,
+    "reward (rolling avg)": 980.47,
+    "steps (rolling avg)": 196.3,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 113,
+    "cumulative_reward": 996.5,
+    "steps": 36.0,
+    "epsilon": 0.3244455298634257,
+    "reward (rolling avg)": 980.4779999999998,
+    "steps (rolling avg)": 196.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 114,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.3212010745647914,
+    "reward (rolling avg)": 980.5099999999999,
+    "steps (rolling avg)": 195.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 115,
+    "cumulative_reward": 996.5,
+    "steps": 36.0,
+    "epsilon": 0.3179890638191435,
+    "reward (rolling avg)": 980.5379999999999,
+    "steps (rolling avg)": 195.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 116,
+    "cumulative_reward": 996.5,
+    "steps": 36.0,
+    "epsilon": 0.31480917318095203,
+    "reward (rolling avg)": 980.5139999999999,
+    "steps (rolling avg)": 195.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 117,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.3116610814491425,
+    "reward (rolling avg)": 980.5179999999999,
+    "steps (rolling avg)": 195.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 118,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.30854447063465107,
+    "reward (rolling avg)": 980.5899999999998,
+    "steps (rolling avg)": 195.1,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 119,
+    "cumulative_reward": 996.7,
+    "steps": 34.0,
+    "epsilon": 0.30545902592830454,
+    "reward (rolling avg)": 980.6139999999998,
+    "steps (rolling avg)": 194.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 120,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.3024044356690215,
+    "reward (rolling avg)": 987.6439999999999,
+    "steps (rolling avg)": 124.56,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 121,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.29938039131233124,
+    "reward (rolling avg)": 987.692,
+    "steps (rolling avg)": 124.08,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 122,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.2963865873992079,
+    "reward (rolling avg)": 987.7400000000001,
+    "steps (rolling avg)": 123.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 123,
+    "cumulative_reward": 995.3,
+    "steps": 48.0,
+    "epsilon": 0.29342272152521587,
+    "reward (rolling avg)": 987.7280000000002,
+    "steps (rolling avg)": 123.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 124,
+    "cumulative_reward": 996.9,
+    "steps": 32.0,
+    "epsilon": 0.2904884943099637,
+    "reward (rolling avg)": 987.7400000000001,
+    "steps (rolling avg)": 123.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 125,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.28758360936686406,
+    "reward (rolling avg)": 987.768,
+    "steps (rolling avg)": 123.32,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 126,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.2847077732731954,
+    "reward (rolling avg)": 987.808,
+    "steps (rolling avg)": 122.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 127,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.28186069554046345,
+    "reward (rolling avg)": 987.8120000000001,
+    "steps (rolling avg)": 122.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 128,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.2790420885850588,
+    "reward (rolling avg)": 987.832,
+    "steps (rolling avg)": 122.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 129,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.2762516676992082,
+    "reward (rolling avg)": 987.8520000000003,
+    "steps (rolling avg)": 122.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 130,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.27348915102221616,
+    "reward (rolling avg)": 987.8960000000002,
+    "steps (rolling avg)": 122.04,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 131,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.270754259511994,
+    "reward (rolling avg)": 991.32,
+    "steps (rolling avg)": 87.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 132,
+    "cumulative_reward": 996.7,
+    "steps": 34.0,
+    "epsilon": 0.26804671691687404,
+    "reward (rolling avg)": 991.3039999999997,
+    "steps (rolling avg)": 87.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 133,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.2653662497477053,
+    "reward (rolling avg)": 991.312,
+    "steps (rolling avg)": 87.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 134,
+    "cumulative_reward": 996.5,
+    "steps": 36.0,
+    "epsilon": 0.2627125872502282,
+    "reward (rolling avg)": 991.3000000000002,
+    "steps (rolling avg)": 88.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 135,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.2600854613777259,
+    "reward (rolling avg)": 991.3040000000001,
+    "steps (rolling avg)": 87.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 136,
+    "cumulative_reward": 837.7000000000049,
+    "steps": 1624.0,
+    "epsilon": 0.2574846067639487,
+    "reward (rolling avg)": 988.1080000000002,
+    "steps (rolling avg)": 119.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 137,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.2549097606963092,
+    "reward (rolling avg)": 988.104,
+    "steps (rolling avg)": 119.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 138,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.2523606630893461,
+    "reward (rolling avg)": 988.1560000000001,
+    "steps (rolling avg)": 119.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 139,
+    "cumulative_reward": 995.3,
+    "steps": 48.0,
+    "epsilon": 0.24983705645845267,
+    "reward (rolling avg)": 988.1320000000001,
+    "steps (rolling avg)": 119.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 140,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.24733868589386815,
+    "reward (rolling avg)": 988.1320000000003,
+    "steps (rolling avg)": 119.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 141,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.24486529903492946,
+    "reward (rolling avg)": 988.1400000000001,
+    "steps (rolling avg)": 119.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 142,
+    "cumulative_reward": 996.7,
+    "steps": 34.0,
+    "epsilon": 0.24241664604458016,
+    "reward (rolling avg)": 988.12,
+    "steps (rolling avg)": 119.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 143,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.23999247958413436,
+    "reward (rolling avg)": 988.1280000000002,
+    "steps (rolling avg)": 119.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 144,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.23759255478829303,
+    "reward (rolling avg)": 988.1320000000001,
+    "steps (rolling avg)": 119.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 145,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.2352166292404101,
+    "reward (rolling avg)": 988.1360000000001,
+    "steps (rolling avg)": 119.64,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 146,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.232864462948006,
+    "reward (rolling avg)": 988.1920000000001,
+    "steps (rolling avg)": 119.08,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 147,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.23053581831852593,
+    "reward (rolling avg)": 988.1920000000001,
+    "steps (rolling avg)": 119.08,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 148,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.22823046013534068,
+    "reward (rolling avg)": 988.2160000000002,
+    "steps (rolling avg)": 118.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 149,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.22594815553398728,
+    "reward (rolling avg)": 988.2120000000002,
+    "steps (rolling avg)": 118.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 150,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.22368867397864742,
+    "reward (rolling avg)": 988.2160000000002,
+    "steps (rolling avg)": 118.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 151,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.22145178723886094,
+    "reward (rolling avg)": 993.9800000000001,
+    "steps (rolling avg)": 61.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 152,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.21923726936647234,
+    "reward (rolling avg)": 994.0040000000001,
+    "steps (rolling avg)": 60.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 153,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.2170448966728076,
+    "reward (rolling avg)": 994.0040000000001,
+    "steps (rolling avg)": 60.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 154,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.21487444770607952,
+    "reward (rolling avg)": 994.0280000000001,
+    "steps (rolling avg)": 60.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 155,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.21272570322901874,
+    "reward (rolling avg)": 994.0320000000002,
+    "steps (rolling avg)": 60.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 156,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.21059844619672854,
+    "reward (rolling avg)": 994.0440000000002,
+    "steps (rolling avg)": 60.56,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 157,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.20849246173476127,
+    "reward (rolling avg)": 994.0640000000002,
+    "steps (rolling avg)": 60.36,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 158,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.20640753711741366,
+    "reward (rolling avg)": 994.0840000000003,
+    "steps (rolling avg)": 60.16,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 159,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.20434346174623952,
+    "reward (rolling avg)": 994.104,
+    "steps (rolling avg)": 59.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 160,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.20230002712877712,
+    "reward (rolling avg)": 994.104,
+    "steps (rolling avg)": 59.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 161,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.20027702685748935,
+    "reward (rolling avg)": 994.0960000000002,
+    "steps (rolling avg)": 60.04,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 162,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.19827425658891445,
+    "reward (rolling avg)": 994.1080000000002,
+    "steps (rolling avg)": 59.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 163,
+    "cumulative_reward": 996.9,
+    "steps": 32.0,
+    "epsilon": 0.1962915140230253,
+    "reward (rolling avg)": 994.1160000000002,
+    "steps (rolling avg)": 59.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 164,
+    "cumulative_reward": 996.9,
+    "steps": 32.0,
+    "epsilon": 0.19432859888279505,
+    "reward (rolling avg)": 994.1080000000002,
+    "steps (rolling avg)": 59.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 165,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.1923853128939671,
+    "reward (rolling avg)": 994.132,
+    "steps (rolling avg)": 59.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 166,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.19046145976502743,
+    "reward (rolling avg)": 994.16,
+    "steps (rolling avg)": 59.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 167,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.18855684516737714,
+    "reward (rolling avg)": 994.1680000000001,
+    "steps (rolling avg)": 59.32,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 168,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.18667127671570335,
+    "reward (rolling avg)": 994.168,
+    "steps (rolling avg)": 59.32,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 169,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.18480456394854633,
+    "reward (rolling avg)": 994.1759999999999,
+    "steps (rolling avg)": 59.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 170,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.18295651830906087,
+    "reward (rolling avg)": 994.1759999999999,
+    "steps (rolling avg)": 59.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 171,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.18112695312597027,
+    "reward (rolling avg)": 994.18,
+    "steps (rolling avg)": 59.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 172,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.17931568359471056,
+    "reward (rolling avg)": 994.188,
+    "steps (rolling avg)": 59.12,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 173,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.17752252675876345,
+    "reward (rolling avg)": 994.2439999999999,
+    "steps (rolling avg)": 58.56,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 174,
+    "cumulative_reward": 918.7000000000004,
+    "steps": 814.0,
+    "epsilon": 0.17574730149117582,
+    "reward (rolling avg)": 992.6799999999998,
+    "steps (rolling avg)": 74.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 175,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.17398982847626407,
+    "reward (rolling avg)": 992.676,
+    "steps (rolling avg)": 74.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 176,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.17224993019150142,
+    "reward (rolling avg)": 992.6720000000001,
+    "steps (rolling avg)": 74.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 177,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.1705274308895864,
+    "reward (rolling avg)": 992.6680000000001,
+    "steps (rolling avg)": 74.32,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 178,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.16882215658069055,
+    "reward (rolling avg)": 992.6840000000001,
+    "steps (rolling avg)": 74.16,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 179,
+    "cumulative_reward": 982.2,
+    "steps": 179.0,
+    "epsilon": 0.16713393501488363,
+    "reward (rolling avg)": 992.382,
+    "steps (rolling avg)": 77.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 180,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.16546259566473479,
+    "reward (rolling avg)": 992.3940000000001,
+    "steps (rolling avg)": 77.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 181,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.16380796970808745,
+    "reward (rolling avg)": 992.414,
+    "steps (rolling avg)": 76.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 182,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.16216989001100657,
+    "reward (rolling avg)": 992.4260000000002,
+    "steps (rolling avg)": 76.74,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 183,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.1605481911108965,
+    "reward (rolling avg)": 992.4180000000001,
+    "steps (rolling avg)": 76.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 184,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.15894270919978754,
+    "reward (rolling avg)": 992.4380000000002,
+    "steps (rolling avg)": 76.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 185,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.15735328210778965,
+    "reward (rolling avg)": 992.4540000000001,
+    "steps (rolling avg)": 76.46,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 186,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.15577974928671176,
+    "reward (rolling avg)": 995.6580000000001,
+    "steps (rolling avg)": 44.42,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 187,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.15422195179384465,
+    "reward (rolling avg)": 995.674,
+    "steps (rolling avg)": 44.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 188,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.1526797322759062,
+    "reward (rolling avg)": 995.67,
+    "steps (rolling avg)": 44.3,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 189,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.15115293495314713,
+    "reward (rolling avg)": 995.7139999999999,
+    "steps (rolling avg)": 43.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 190,
+    "cumulative_reward": 984.7,
+    "steps": 154.0,
+    "epsilon": 0.14964140560361566,
+    "reward (rolling avg)": 995.462,
+    "steps (rolling avg)": 46.38,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 191,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.1481449915475795,
+    "reward (rolling avg)": 995.4699999999998,
+    "steps (rolling avg)": 46.3,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 192,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.1466635416321037,
+    "reward (rolling avg)": 995.482,
+    "steps (rolling avg)": 46.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 193,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.14519690621578268,
+    "reward (rolling avg)": 995.498,
+    "steps (rolling avg)": 46.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 194,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.14374493715362485,
+    "reward (rolling avg)": 995.5059999999999,
+    "steps (rolling avg)": 45.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 195,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.1423074877820886,
+    "reward (rolling avg)": 995.5099999999999,
+    "steps (rolling avg)": 45.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 196,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.1408844129042677,
+    "reward (rolling avg)": 995.5140000000001,
+    "steps (rolling avg)": 45.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 197,
+    "cumulative_reward": 997.1,
+    "steps": 30.0,
+    "epsilon": 0.13947556877522502,
+    "reward (rolling avg)": 995.5060000000001,
+    "steps (rolling avg)": 45.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 198,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.13808081308747278,
+    "reward (rolling avg)": 995.51,
+    "steps (rolling avg)": 45.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 199,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.13670000495659804,
+    "reward (rolling avg)": 995.5139999999998,
+    "steps (rolling avg)": 45.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 200,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.13533300490703207,
+    "reward (rolling avg)": 995.5219999999998,
+    "steps (rolling avg)": 45.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 201,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.13397967485796175,
+    "reward (rolling avg)": 995.534,
+    "steps (rolling avg)": 45.66,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 202,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.13263987810938213,
+    "reward (rolling avg)": 995.534,
+    "steps (rolling avg)": 45.66,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 203,
+    "cumulative_reward": 999.9,
+    "steps": 2.0,
+    "epsilon": 0.1313134793282883,
+    "reward (rolling avg)": 995.582,
+    "steps (rolling avg)": 45.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 204,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.13000034453500542,
+    "reward (rolling avg)": 995.57,
+    "steps (rolling avg)": 45.3,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 205,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.12870034108965536,
+    "reward (rolling avg)": 995.5740000000001,
+    "steps (rolling avg)": 45.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 206,
+    "cumulative_reward": 966.1999999999998,
+    "steps": 339.0,
+    "epsilon": 0.12741333767875881,
+    "reward (rolling avg)": 994.952,
+    "steps (rolling avg)": 51.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 207,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.12613920430197123,
+    "reward (rolling avg)": 994.952,
+    "steps (rolling avg)": 51.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 208,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.12487781225895152,
+    "reward (rolling avg)": 994.944,
+    "steps (rolling avg)": 51.56,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 209,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.123629034136362,
+    "reward (rolling avg)": 994.9479999999999,
+    "steps (rolling avg)": 51.52,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 210,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.12239274379499838,
+    "reward (rolling avg)": 994.944,
+    "steps (rolling avg)": 51.56,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 211,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.1211688163570484,
+    "reward (rolling avg)": 994.952,
+    "steps (rolling avg)": 51.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 212,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.11995712819347792,
+    "reward (rolling avg)": 994.9639999999999,
+    "steps (rolling avg)": 51.36,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 213,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.11875755691154315,
+    "reward (rolling avg)": 994.9879999999998,
+    "steps (rolling avg)": 51.12,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 214,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.11756998134242772,
+    "reward (rolling avg)": 995.0119999999998,
+    "steps (rolling avg)": 50.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 215,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.11639428152900344,
+    "reward (rolling avg)": 995.008,
+    "steps (rolling avg)": 50.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 216,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.11523033871371341,
+    "reward (rolling avg)": 995.012,
+    "steps (rolling avg)": 50.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 217,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.11407803532657627,
+    "reward (rolling avg)": 995.0120000000002,
+    "steps (rolling avg)": 50.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 218,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.11293725497331052,
+    "reward (rolling avg)": 995.02,
+    "steps (rolling avg)": 50.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 219,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.1118078824235774,
+    "reward (rolling avg)": 995.028,
+    "steps (rolling avg)": 50.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 220,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.11068980359934164,
+    "reward (rolling avg)": 995.0319999999999,
+    "steps (rolling avg)": 50.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 221,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.10958290556334822,
+    "reward (rolling avg)": 995.0320000000002,
+    "steps (rolling avg)": 50.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 222,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.10848707650771475,
+    "reward (rolling avg)": 995.0319999999999,
+    "steps (rolling avg)": 50.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 223,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.1074022057426376,
+    "reward (rolling avg)": 995.0279999999999,
+    "steps (rolling avg)": 50.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 224,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.10632818368521123,
+    "reward (rolling avg)": 996.6080000000001,
+    "steps (rolling avg)": 34.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 225,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.10526490184835911,
+    "reward (rolling avg)": 996.6159999999999,
+    "steps (rolling avg)": 34.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 226,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.10421225282987552,
+    "reward (rolling avg)": 996.6240000000001,
+    "steps (rolling avg)": 34.76,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 227,
+    "cumulative_reward": 997.3,
+    "steps": 28.0,
+    "epsilon": 0.10317013030157676,
+    "reward (rolling avg)": 996.6240000000001,
+    "steps (rolling avg)": 34.76,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 228,
+    "cumulative_reward": 817.2000000000061,
+    "steps": 1829.0,
+    "epsilon": 0.10213842899856099,
+    "reward (rolling avg)": 993.0100000000001,
+    "steps (rolling avg)": 70.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 229,
+    "cumulative_reward": 997.5,
+    "steps": 26.0,
+    "epsilon": 0.10111704470857538,
+    "reward (rolling avg)": 993.3159999999999,
+    "steps (rolling avg)": 67.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 230,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.10010587426148963,
+    "reward (rolling avg)": 993.316,
+    "steps (rolling avg)": 67.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 231,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.09910481551887473,
+    "reward (rolling avg)": 993.3120000000001,
+    "steps (rolling avg)": 67.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 232,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.09811376736368599,
+    "reward (rolling avg)": 993.3240000000001,
+    "steps (rolling avg)": 67.76,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 233,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.09713262969004913,
+    "reward (rolling avg)": 993.3320000000001,
+    "steps (rolling avg)": 67.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 234,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.09616130339314863,
+    "reward (rolling avg)": 993.3400000000001,
+    "steps (rolling avg)": 67.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 235,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.09519969035921715,
+    "reward (rolling avg)": 993.34,
+    "steps (rolling avg)": 67.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 236,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.09424769345562498,
+    "reward (rolling avg)": 993.3439999999999,
+    "steps (rolling avg)": 67.56,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 237,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.09330521652106873,
+    "reward (rolling avg)": 993.3480000000001,
+    "steps (rolling avg)": 67.52,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 238,
+    "cumulative_reward": 994.5,
+    "steps": 56.0,
+    "epsilon": 0.09237216435585804,
+    "reward (rolling avg)": 993.288,
+    "steps (rolling avg)": 68.12,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 239,
+    "cumulative_reward": 998.4,
+    "steps": 17.0,
+    "epsilon": 0.09144844271229946,
+    "reward (rolling avg)": 993.3060000000002,
+    "steps (rolling avg)": 67.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 240,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.09053395828517646,
+    "reward (rolling avg)": 993.5700000000003,
+    "steps (rolling avg)": 65.3,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 241,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.08962861870232469,
+    "reward (rolling avg)": 993.562,
+    "steps (rolling avg)": 65.38,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 242,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.08873233251530144,
+    "reward (rolling avg)": 993.5740000000001,
+    "steps (rolling avg)": 65.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 243,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.08784500919014843,
+    "reward (rolling avg)": 993.5660000000003,
+    "steps (rolling avg)": 65.34,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 244,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.08696655909824694,
+    "reward (rolling avg)": 993.5620000000001,
+    "steps (rolling avg)": 65.38,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 245,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.08609689350726446,
+    "reward (rolling avg)": 993.5700000000002,
+    "steps (rolling avg)": 65.3,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 246,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.08523592457219181,
+    "reward (rolling avg)": 993.5659999999999,
+    "steps (rolling avg)": 65.34,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 247,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.0843835653264699,
+    "reward (rolling avg)": 993.586,
+    "steps (rolling avg)": 65.14,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 248,
+    "cumulative_reward": 838.1000000000049,
+    "steps": 1620.0,
+    "epsilon": 0.0835397296732052,
+    "reward (rolling avg)": 990.3860000000002,
+    "steps (rolling avg)": 97.14,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 249,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.08270433237647315,
+    "reward (rolling avg)": 990.3900000000003,
+    "steps (rolling avg)": 97.1,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 250,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.08187728905270841,
+    "reward (rolling avg)": 990.3940000000002,
+    "steps (rolling avg)": 97.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 251,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.08105851616218133,
+    "reward (rolling avg)": 990.4020000000003,
+    "steps (rolling avg)": 96.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 252,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.08024793100055952,
+    "reward (rolling avg)": 990.4100000000003,
+    "steps (rolling avg)": 96.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 253,
+    "cumulative_reward": 966.3999999999997,
+    "steps": 337.0,
+    "epsilon": 0.07944545169055392,
+    "reward (rolling avg)": 989.7400000000002,
+    "steps (rolling avg)": 103.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 254,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.07865099717364837,
+    "reward (rolling avg)": 989.7520000000003,
+    "steps (rolling avg)": 103.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 255,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.07786448720191189,
+    "reward (rolling avg)": 989.7440000000001,
+    "steps (rolling avg)": 103.56,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 256,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.07708584232989277,
+    "reward (rolling avg)": 990.3820000000003,
+    "steps (rolling avg)": 97.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 257,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.07631498390659384,
+    "reward (rolling avg)": 990.3820000000001,
+    "steps (rolling avg)": 97.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 258,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.07555183406752791,
+    "reward (rolling avg)": 990.3900000000003,
+    "steps (rolling avg)": 97.1,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 259,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.07479631572685264,
+    "reward (rolling avg)": 990.3980000000001,
+    "steps (rolling avg)": 97.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 260,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.07404835256958411,
+    "reward (rolling avg)": 990.4020000000003,
+    "steps (rolling avg)": 96.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 261,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.07330786904388827,
+    "reward (rolling avg)": 990.3980000000001,
+    "steps (rolling avg)": 97.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 262,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.07257479035344938,
+    "reward (rolling avg)": 990.398,
+    "steps (rolling avg)": 97.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 263,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.07184904244991488,
+    "reward (rolling avg)": 990.3940000000002,
+    "steps (rolling avg)": 97.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 264,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.07113055202541574,
+    "reward (rolling avg)": 990.3940000000002,
+    "steps (rolling avg)": 97.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 265,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.07041924650516158,
+    "reward (rolling avg)": 990.4060000000001,
+    "steps (rolling avg)": 96.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 266,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06971505404010997,
+    "reward (rolling avg)": 990.4060000000001,
+    "steps (rolling avg)": 96.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 267,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06901790349970886,
+    "reward (rolling avg)": 990.4100000000003,
+    "steps (rolling avg)": 96.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 268,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06832772446471178,
+    "reward (rolling avg)": 990.4140000000002,
+    "steps (rolling avg)": 96.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 269,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06764444722006466,
+    "reward (rolling avg)": 990.4260000000002,
+    "steps (rolling avg)": 96.74,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 270,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.066968002747864,
+    "reward (rolling avg)": 990.4300000000003,
+    "steps (rolling avg)": 96.7,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 271,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.06629832272038537,
+    "reward (rolling avg)": 990.4300000000003,
+    "steps (rolling avg)": 96.7,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 272,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06563533949318151,
+    "reward (rolling avg)": 990.4380000000002,
+    "steps (rolling avg)": 96.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 273,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06497898609824969,
+    "reward (rolling avg)": 990.4420000000002,
+    "steps (rolling avg)": 96.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 274,
+    "cumulative_reward": 974.6999999999999,
+    "steps": 254.0,
+    "epsilon": 0.0643291962372672,
+    "reward (rolling avg)": 989.9820000000003,
+    "steps (rolling avg)": 101.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 275,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06368590427489453,
+    "reward (rolling avg)": 989.9860000000002,
+    "steps (rolling avg)": 101.14,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 276,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.06304904523214558,
+    "reward (rolling avg)": 989.9820000000003,
+    "steps (rolling avg)": 101.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 277,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.06241855477982412,
+    "reward (rolling avg)": 989.9940000000003,
+    "steps (rolling avg)": 101.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 278,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06179436923202588,
+    "reward (rolling avg)": 993.6120000000001,
+    "steps (rolling avg)": 64.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 279,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06117642553970562,
+    "reward (rolling avg)": 993.6240000000001,
+    "steps (rolling avg)": 64.76,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 280,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.06056466128430856,
+    "reward (rolling avg)": 993.6240000000001,
+    "steps (rolling avg)": 64.76,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 281,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.05995901467146548,
+    "reward (rolling avg)": 993.628,
+    "steps (rolling avg)": 64.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 282,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.05935942452475082,
+    "reward (rolling avg)": 993.6320000000001,
+    "steps (rolling avg)": 64.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 283,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.058765830279503314,
+    "reward (rolling avg)": 993.628,
+    "steps (rolling avg)": 64.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 284,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.05817817197670828,
+    "reward (rolling avg)": 993.628,
+    "steps (rolling avg)": 64.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 285,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.057596390256941195,
+    "reward (rolling avg)": 993.628,
+    "steps (rolling avg)": 64.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 286,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.05702042635437178,
+    "reward (rolling avg)": 993.628,
+    "steps (rolling avg)": 64.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 287,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.05645022209082806,
+    "reward (rolling avg)": 993.628,
+    "steps (rolling avg)": 64.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 288,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.05588571986991978,
+    "reward (rolling avg)": 993.696,
+    "steps (rolling avg)": 64.04,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 289,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.055326862671220584,
+    "reward (rolling avg)": 993.69,
+    "steps (rolling avg)": 64.1,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 290,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.05477359404450838,
+    "reward (rolling avg)": 993.694,
+    "steps (rolling avg)": 64.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 291,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.054225858104063294,
+    "reward (rolling avg)": 993.6980000000002,
+    "steps (rolling avg)": 64.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 292,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.05368359952302266,
+    "reward (rolling avg)": 993.7020000000001,
+    "steps (rolling avg)": 63.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 293,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.053146763527792434,
+    "reward (rolling avg)": 993.71,
+    "steps (rolling avg)": 63.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 294,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.052615295892514506,
+    "reward (rolling avg)": 993.7139999999999,
+    "steps (rolling avg)": 63.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 295,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.052089142933589364,
+    "reward (rolling avg)": 993.714,
+    "steps (rolling avg)": 63.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 296,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.05156825150425347,
+    "reward (rolling avg)": 993.7220000000001,
+    "steps (rolling avg)": 63.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 297,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.051052568989210935,
+    "reward (rolling avg)": 993.7220000000001,
+    "steps (rolling avg)": 63.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 298,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.05054204329931883,
+    "reward (rolling avg)": 996.918,
+    "steps (rolling avg)": 31.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 299,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.05003662286632564,
+    "reward (rolling avg)": 996.918,
+    "steps (rolling avg)": 31.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 300,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.04953625663766238,
+    "reward (rolling avg)": 996.9220000000001,
+    "steps (rolling avg)": 31.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 301,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.04904089407128576,
+    "reward (rolling avg)": 996.918,
+    "steps (rolling avg)": 31.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 302,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.0485504851305729,
+    "reward (rolling avg)": 996.918,
+    "steps (rolling avg)": 31.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 303,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.048064980279267165,
+    "reward (rolling avg)": 997.552,
+    "steps (rolling avg)": 25.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 304,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.04758433047647449,
+    "reward (rolling avg)": 997.5520000000001,
+    "steps (rolling avg)": 25.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 305,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.04710848717170975,
+    "reward (rolling avg)": 997.56,
+    "steps (rolling avg)": 25.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 306,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.04663740229999265,
+    "reward (rolling avg)": 997.556,
+    "steps (rolling avg)": 25.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 307,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.04617102827699272,
+    "reward (rolling avg)": 997.56,
+    "steps (rolling avg)": 25.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 308,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.045709317994222794,
+    "reward (rolling avg)": 997.56,
+    "steps (rolling avg)": 25.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 309,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.04525222481428057,
+    "reward (rolling avg)": 997.556,
+    "steps (rolling avg)": 25.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 310,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.04479970256613776,
+    "reward (rolling avg)": 997.56,
+    "steps (rolling avg)": 25.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 311,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.04435170554047638,
+    "reward (rolling avg)": 997.564,
+    "steps (rolling avg)": 25.36,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 312,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.043908188485071616,
+    "reward (rolling avg)": 997.556,
+    "steps (rolling avg)": 25.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 313,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.0434691066002209,
+    "reward (rolling avg)": 997.5599999999998,
+    "steps (rolling avg)": 25.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 314,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.04303441553421869,
+    "reward (rolling avg)": 997.56,
+    "steps (rolling avg)": 25.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 315,
+    "cumulative_reward": 974.1999999999999,
+    "steps": 259.0,
+    "epsilon": 0.0426040713788765,
+    "reward (rolling avg)": 997.0819999999999,
+    "steps (rolling avg)": 30.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 316,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.04217803066508773,
+    "reward (rolling avg)": 997.082,
+    "steps (rolling avg)": 30.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 317,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.04175625035843686,
+    "reward (rolling avg)": 997.0819999999999,
+    "steps (rolling avg)": 30.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 318,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.041338687854852486,
+    "reward (rolling avg)": 997.082,
+    "steps (rolling avg)": 30.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 319,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.04092530097630396,
+    "reward (rolling avg)": 997.0819999999999,
+    "steps (rolling avg)": 30.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 320,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.040516047966540916,
+    "reward (rolling avg)": 997.078,
+    "steps (rolling avg)": 30.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 321,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.04011088748687551,
+    "reward (rolling avg)": 997.082,
+    "steps (rolling avg)": 30.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 322,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.03970977861200675,
+    "reward (rolling avg)": 997.078,
+    "steps (rolling avg)": 30.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 323,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.03931268082588668,
+    "reward (rolling avg)": 997.0740000000001,
+    "steps (rolling avg)": 30.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 324,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03891955401762781,
+    "reward (rolling avg)": 997.5419999999999,
+    "steps (rolling avg)": 25.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 325,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.03853035847745153,
+    "reward (rolling avg)": 997.538,
+    "steps (rolling avg)": 25.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 326,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03814505489267701,
+    "reward (rolling avg)": 997.546,
+    "steps (rolling avg)": 25.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 327,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03776360434375024,
+    "reward (rolling avg)": 997.55,
+    "steps (rolling avg)": 25.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 328,
+    "cumulative_reward": 905.1000000000012,
+    "steps": 950.0,
+    "epsilon": 0.03738596830031274,
+    "reward (rolling avg)": 995.69,
+    "steps (rolling avg)": 44.1,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 329,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03701210861730961,
+    "reward (rolling avg)": 995.69,
+    "steps (rolling avg)": 44.1,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 330,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03664198753113651,
+    "reward (rolling avg)": 995.69,
+    "steps (rolling avg)": 44.1,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 331,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.036275567655825146,
+    "reward (rolling avg)": 995.686,
+    "steps (rolling avg)": 44.14,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 332,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03591281197926689,
+    "reward (rolling avg)": 995.686,
+    "steps (rolling avg)": 44.14,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 333,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.035553683859474224,
+    "reward (rolling avg)": 995.694,
+    "steps (rolling avg)": 44.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 334,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03519814702087948,
+    "reward (rolling avg)": 995.6979999999999,
+    "steps (rolling avg)": 44.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 335,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03484616555067068,
+    "reward (rolling avg)": 995.6979999999999,
+    "steps (rolling avg)": 44.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 336,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.034497703895163975,
+    "reward (rolling avg)": 995.6979999999999,
+    "steps (rolling avg)": 44.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 337,
+    "cumulative_reward": 980.2,
+    "steps": 199.0,
+    "epsilon": 0.03415272685621234,
+    "reward (rolling avg)": 995.3399999999998,
+    "steps (rolling avg)": 47.6,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 338,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03381119958765021,
+    "reward (rolling avg)": 995.3439999999999,
+    "steps (rolling avg)": 47.56,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 339,
+    "cumulative_reward": 901.8000000000013,
+    "steps": 983.0,
+    "epsilon": 0.03347308759177371,
+    "reward (rolling avg)": 993.418,
+    "steps (rolling avg)": 66.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 340,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03313835671585597,
+    "reward (rolling avg)": 993.418,
+    "steps (rolling avg)": 66.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 341,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.03280697314869741,
+    "reward (rolling avg)": 993.418,
+    "steps (rolling avg)": 66.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 342,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.032478903417210436,
+    "reward (rolling avg)": 993.4100000000002,
+    "steps (rolling avg)": 66.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 343,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.032154114383038335,
+    "reward (rolling avg)": 993.4060000000001,
+    "steps (rolling avg)": 66.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 344,
+    "cumulative_reward": 993.8,
+    "steps": 63.0,
+    "epsilon": 0.03183257323920795,
+    "reward (rolling avg)": 993.3200000000002,
+    "steps (rolling avg)": 67.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 345,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.03151424750681587,
+    "reward (rolling avg)": 993.3120000000001,
+    "steps (rolling avg)": 67.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 346,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03119910503174771,
+    "reward (rolling avg)": 993.312,
+    "steps (rolling avg)": 67.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 347,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.030887113981430233,
+    "reward (rolling avg)": 993.3120000000001,
+    "steps (rolling avg)": 67.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 348,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.03057824284161593,
+    "reward (rolling avg)": 993.308,
+    "steps (rolling avg)": 67.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 349,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.03027246041319977,
+    "reward (rolling avg)": 993.3120000000001,
+    "steps (rolling avg)": 67.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 350,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.029969735809067772,
+    "reward (rolling avg)": 993.312,
+    "steps (rolling avg)": 67.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 351,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.029670038450977095,
+    "reward (rolling avg)": 993.3120000000001,
+    "steps (rolling avg)": 67.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 352,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.029373338066467324,
+    "reward (rolling avg)": 993.3120000000001,
+    "steps (rolling avg)": 67.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 353,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.02907960468580265,
+    "reward (rolling avg)": 993.3040000000001,
+    "steps (rolling avg)": 67.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 354,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.028788808638944622,
+    "reward (rolling avg)": 993.308,
+    "steps (rolling avg)": 67.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 355,
+    "cumulative_reward": 958.3999999999996,
+    "steps": 417.0,
+    "epsilon": 0.028500920552555174,
+    "reward (rolling avg)": 992.5140000000001,
+    "steps (rolling avg)": 75.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 356,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.028215911347029624,
+    "reward (rolling avg)": 992.518,
+    "steps (rolling avg)": 75.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 357,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.027933752233559327,
+    "reward (rolling avg)": 992.5140000000001,
+    "steps (rolling avg)": 75.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 358,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.027654414711223735,
+    "reward (rolling avg)": 992.5140000000001,
+    "steps (rolling avg)": 75.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 359,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.027377870564111496,
+    "reward (rolling avg)": 992.518,
+    "steps (rolling avg)": 75.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 360,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.027104091858470382,
+    "reward (rolling avg)": 992.518,
+    "steps (rolling avg)": 75.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 361,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.026833050939885677,
+    "reward (rolling avg)": 992.5180000000001,
+    "steps (rolling avg)": 75.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 362,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.02656472043048682,
+    "reward (rolling avg)": 992.5260000000001,
+    "steps (rolling avg)": 75.74,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 363,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.02629907322618195,
+    "reward (rolling avg)": 992.5260000000001,
+    "steps (rolling avg)": 75.74,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 364,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.026036082493920133,
+    "reward (rolling avg)": 992.5220000000002,
+    "steps (rolling avg)": 75.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 365,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.02577572166898093,
+    "reward (rolling avg)": 993.0000000000001,
+    "steps (rolling avg)": 71.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 366,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.025517964452291122,
+    "reward (rolling avg)": 993.0,
+    "steps (rolling avg)": 71.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 367,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.02526278480776821,
+    "reward (rolling avg)": 992.9960000000001,
+    "steps (rolling avg)": 71.04,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 368,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.025010156959690527,
+    "reward (rolling avg)": 992.988,
+    "steps (rolling avg)": 71.12,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 369,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.02476005539009362,
+    "reward (rolling avg)": 992.988,
+    "steps (rolling avg)": 71.12,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 370,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.024512454836192684,
+    "reward (rolling avg)": 992.9920000000001,
+    "steps (rolling avg)": 71.08,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 371,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.024267330287830756,
+    "reward (rolling avg)": 992.9920000000001,
+    "steps (rolling avg)": 71.08,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 372,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.024024656984952448,
+    "reward (rolling avg)": 992.9960000000001,
+    "steps (rolling avg)": 71.04,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 373,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.023784410415102923,
+    "reward (rolling avg)": 993.0,
+    "steps (rolling avg)": 71.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 374,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.023546566310951894,
+    "reward (rolling avg)": 993.0,
+    "steps (rolling avg)": 71.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 375,
+    "cumulative_reward": 995.5,
+    "steps": 46.0,
+    "epsilon": 0.023311100647842375,
+    "reward (rolling avg)": 992.9520000000001,
+    "steps (rolling avg)": 71.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 376,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.02307798964136395,
+    "reward (rolling avg)": 992.952,
+    "steps (rolling avg)": 71.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 377,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.022847209744950314,
+    "reward (rolling avg)": 992.9520000000001,
+    "steps (rolling avg)": 71.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 378,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.02261873764750081,
+    "reward (rolling avg)": 994.812,
+    "steps (rolling avg)": 52.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 379,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.022392550271025803,
+    "reward (rolling avg)": 994.8120000000001,
+    "steps (rolling avg)": 52.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 380,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.022168624768315544,
+    "reward (rolling avg)": 994.808,
+    "steps (rolling avg)": 52.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 381,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.02194693852063239,
+    "reward (rolling avg)": 994.8120000000001,
+    "steps (rolling avg)": 52.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 382,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.021727469135426065,
+    "reward (rolling avg)": 994.8120000000001,
+    "steps (rolling avg)": 52.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 383,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.021510194444071803,
+    "reward (rolling avg)": 994.8120000000001,
+    "steps (rolling avg)": 52.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 384,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.021295092499631085,
+    "reward (rolling avg)": 994.808,
+    "steps (rolling avg)": 52.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 385,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.021082141574634772,
+    "reward (rolling avg)": 994.8080000000002,
+    "steps (rolling avg)": 52.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 386,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.020871320158888425,
+    "reward (rolling avg)": 994.808,
+    "steps (rolling avg)": 52.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 387,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.020662606957299542,
+    "reward (rolling avg)": 995.166,
+    "steps (rolling avg)": 49.34,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 388,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.020455980887726547,
+    "reward (rolling avg)": 995.166,
+    "steps (rolling avg)": 49.34,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 389,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.02025142107884928,
+    "reward (rolling avg)": 997.092,
+    "steps (rolling avg)": 30.08,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 390,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.020048906868060788,
+    "reward (rolling avg)": 997.092,
+    "steps (rolling avg)": 30.08,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 391,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01984841779938018,
+    "reward (rolling avg)": 997.0920000000001,
+    "steps (rolling avg)": 30.08,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 392,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.019649933621386378,
+    "reward (rolling avg)": 997.1,
+    "steps (rolling avg)": 30.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 393,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.019453434285172513,
+    "reward (rolling avg)": 997.1039999999999,
+    "steps (rolling avg)": 29.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 394,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.019258899942320787,
+    "reward (rolling avg)": 997.19,
+    "steps (rolling avg)": 29.1,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 395,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01906631094289758,
+    "reward (rolling avg)": 997.1979999999999,
+    "steps (rolling avg)": 29.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 396,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.018875647833468602,
+    "reward (rolling avg)": 997.1979999999999,
+    "steps (rolling avg)": 29.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 397,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.018686891355133916,
+    "reward (rolling avg)": 997.1979999999999,
+    "steps (rolling avg)": 29.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 398,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.018500022441582577,
+    "reward (rolling avg)": 997.206,
+    "steps (rolling avg)": 28.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 399,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01831502221716675,
+    "reward (rolling avg)": 997.206,
+    "steps (rolling avg)": 28.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 400,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.018131871994995084,
+    "reward (rolling avg)": 997.202,
+    "steps (rolling avg)": 28.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 401,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.017950553275045134,
+    "reward (rolling avg)": 997.2020000000001,
+    "steps (rolling avg)": 28.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 402,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.017771047742294682,
+    "reward (rolling avg)": 997.2020000000001,
+    "steps (rolling avg)": 28.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 403,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.017593337264871736,
+    "reward (rolling avg)": 997.206,
+    "steps (rolling avg)": 28.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 404,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01741740389222302,
+    "reward (rolling avg)": 997.2020000000001,
+    "steps (rolling avg)": 28.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 405,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01724322985330079,
+    "reward (rolling avg)": 997.9960000000001,
+    "steps (rolling avg)": 21.04,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 406,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.017070797554767782,
+    "reward (rolling avg)": 997.9959999999999,
+    "steps (rolling avg)": 21.04,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 407,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.016900089579220106,
+    "reward (rolling avg)": 998.0,
+    "steps (rolling avg)": 21.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 408,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.016731088683427906,
+    "reward (rolling avg)": 998.0,
+    "steps (rolling avg)": 21.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 409,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.016563777796593626,
+    "reward (rolling avg)": 998.0,
+    "steps (rolling avg)": 21.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 410,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.016398140018627688,
+    "reward (rolling avg)": 998.0,
+    "steps (rolling avg)": 21.0,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 411,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01623415861844141,
+    "reward (rolling avg)": 998.0039999999999,
+    "steps (rolling avg)": 20.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 412,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.016071817032256998,
+    "reward (rolling avg)": 998.0039999999999,
+    "steps (rolling avg)": 20.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 413,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01591109886193443,
+    "reward (rolling avg)": 998.0039999999999,
+    "steps (rolling avg)": 20.96,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 414,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.015751987873315085,
+    "reward (rolling avg)": 998.0079999999999,
+    "steps (rolling avg)": 20.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 415,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.015594467994581935,
+    "reward (rolling avg)": 998.0079999999999,
+    "steps (rolling avg)": 20.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 416,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.015438523314636115,
+    "reward (rolling avg)": 998.008,
+    "steps (rolling avg)": 20.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 417,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.015284138081489753,
+    "reward (rolling avg)": 998.012,
+    "steps (rolling avg)": 20.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 418,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.015131296700674856,
+    "reward (rolling avg)": 998.02,
+    "steps (rolling avg)": 20.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 419,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.014979983733668108,
+    "reward (rolling avg)": 998.0160000000001,
+    "steps (rolling avg)": 20.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 420,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.014830183896331426,
+    "reward (rolling avg)": 998.0160000000001,
+    "steps (rolling avg)": 20.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 421,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.014681882057368112,
+    "reward (rolling avg)": 998.0120000000002,
+    "steps (rolling avg)": 20.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 422,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01453506323679443,
+    "reward (rolling avg)": 998.0120000000002,
+    "steps (rolling avg)": 20.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 423,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.014389712604426485,
+    "reward (rolling avg)": 998.0080000000002,
+    "steps (rolling avg)": 20.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 424,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01424581547838222,
+    "reward (rolling avg)": 998.008,
+    "steps (rolling avg)": 20.92,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 425,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.014103357323598397,
+    "reward (rolling avg)": 998.06,
+    "steps (rolling avg)": 20.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 426,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.013962323750362413,
+    "reward (rolling avg)": 998.06,
+    "steps (rolling avg)": 20.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 427,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.013822700512858789,
+    "reward (rolling avg)": 998.06,
+    "steps (rolling avg)": 20.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 428,
+    "cumulative_reward": 944.0999999999995,
+    "steps": 560.0,
+    "epsilon": 0.0136844735077302,
+    "reward (rolling avg)": 996.98,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 429,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.013547628772652899,
+    "reward (rolling avg)": 996.98,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 430,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01341215248492637,
+    "reward (rolling avg)": 996.98,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 431,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.013278030960077106,
+    "reward (rolling avg)": 996.9760000000001,
+    "steps (rolling avg)": 31.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 432,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.013145250650476335,
+    "reward (rolling avg)": 996.9760000000001,
+    "steps (rolling avg)": 31.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 433,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01301379814397157,
+    "reward (rolling avg)": 996.9759999999999,
+    "steps (rolling avg)": 31.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 434,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.012883660162531854,
+    "reward (rolling avg)": 996.9799999999999,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 435,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.012754823560906535,
+    "reward (rolling avg)": 996.9799999999999,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 436,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01262727532529747,
+    "reward (rolling avg)": 996.98,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 437,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.012501002572044496,
+    "reward (rolling avg)": 996.98,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 438,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01237599254632405,
+    "reward (rolling avg)": 996.9799999999999,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 439,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01225223262086081,
+    "reward (rolling avg)": 996.9759999999999,
+    "steps (rolling avg)": 31.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 440,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.012129710294652202,
+    "reward (rolling avg)": 996.9760000000001,
+    "steps (rolling avg)": 31.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 441,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01200841319170568,
+    "reward (rolling avg)": 996.98,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 442,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.011888329059788623,
+    "reward (rolling avg)": 996.98,
+    "steps (rolling avg)": 31.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 443,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.011769445769190737,
+    "reward (rolling avg)": 996.9760000000001,
+    "steps (rolling avg)": 31.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 444,
+    "cumulative_reward": 962.9999999999998,
+    "steps": 371.0,
+    "epsilon": 0.01165175131149883,
+    "reward (rolling avg)": 996.2740000000001,
+    "steps (rolling avg)": 38.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 445,
+    "cumulative_reward": 972.1999999999998,
+    "steps": 279.0,
+    "epsilon": 0.011535233798383842,
+    "reward (rolling avg)": 995.7560000000001,
+    "steps (rolling avg)": 43.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 446,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.011419881460400004,
+    "reward (rolling avg)": 995.7559999999999,
+    "steps (rolling avg)": 43.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 447,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.011305682645796004,
+    "reward (rolling avg)": 995.7560000000001,
+    "steps (rolling avg)": 43.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 448,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.011192625819338045,
+    "reward (rolling avg)": 995.7520000000001,
+    "steps (rolling avg)": 43.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 449,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.011080699561144665,
+    "reward (rolling avg)": 995.7520000000001,
+    "steps (rolling avg)": 43.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 450,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.010969892565533218,
+    "reward (rolling avg)": 995.7560000000001,
+    "steps (rolling avg)": 43.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 451,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.010860193639877886,
+    "reward (rolling avg)": 995.76,
+    "steps (rolling avg)": 43.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 452,
+    "cumulative_reward": 983.8000000000001,
+    "steps": 163.0,
+    "epsilon": 0.010751591703479106,
+    "reward (rolling avg)": 995.474,
+    "steps (rolling avg)": 46.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 453,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.010644075786444315,
+    "reward (rolling avg)": 995.4780000000001,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 454,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.010537635028579873,
+    "reward (rolling avg)": 995.482,
+    "steps (rolling avg)": 46.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 455,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.010432258678294073,
+    "reward (rolling avg)": 995.482,
+    "steps (rolling avg)": 46.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 456,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.010327936091511133,
+    "reward (rolling avg)": 995.4819999999999,
+    "steps (rolling avg)": 46.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 457,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.010224656730596022,
+    "reward (rolling avg)": 995.4779999999998,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 458,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01012241016329006,
+    "reward (rolling avg)": 995.4780000000001,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 459,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01002118606165716,
+    "reward (rolling avg)": 995.4779999999998,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 460,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4779999999998,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 461,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4779999999998,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 462,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4780000000001,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 463,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4779999999998,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 464,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4780000000001,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 465,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4779999999998,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 466,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4780000000001,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 467,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4780000000001,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 468,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4780000000001,
+    "steps (rolling avg)": 46.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 469,
+    "cumulative_reward": 940.3999999999994,
+    "steps": 597.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.3280000000002,
+    "steps (rolling avg)": 57.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 470,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.328,
+    "steps (rolling avg)": 57.72,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 471,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.332,
+    "steps (rolling avg)": 57.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 472,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.332,
+    "steps (rolling avg)": 57.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 473,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.3320000000001,
+    "steps (rolling avg)": 57.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 474,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.332,
+    "steps (rolling avg)": 57.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 475,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.332,
+    "steps (rolling avg)": 57.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 476,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.332,
+    "steps (rolling avg)": 57.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 477,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.332,
+    "steps (rolling avg)": 57.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 478,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4119999999999,
+    "steps (rolling avg)": 46.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 479,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4120000000001,
+    "steps (rolling avg)": 46.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 480,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.416,
+    "steps (rolling avg)": 46.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 481,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.42,
+    "steps (rolling avg)": 46.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 482,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.42,
+    "steps (rolling avg)": 46.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 483,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.42,
+    "steps (rolling avg)": 46.8,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 484,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.416,
+    "steps (rolling avg)": 46.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 485,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.416,
+    "steps (rolling avg)": 46.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 486,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4159999999999,
+    "steps (rolling avg)": 46.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 487,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4159999999999,
+    "steps (rolling avg)": 46.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 488,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4159999999999,
+    "steps (rolling avg)": 46.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 489,
+    "cumulative_reward": 908.700000000001,
+    "steps": 914.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.6320000000001,
+    "steps (rolling avg)": 64.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 490,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.632,
+    "steps (rolling avg)": 64.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 491,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.632,
+    "steps (rolling avg)": 64.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 492,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.632,
+    "steps (rolling avg)": 64.68,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 493,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.6360000000001,
+    "steps (rolling avg)": 64.64,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 494,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.3379999999999,
+    "steps (rolling avg)": 57.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 495,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.8560000000001,
+    "steps (rolling avg)": 52.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 496,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.8560000000001,
+    "steps (rolling avg)": 52.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 497,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.8560000000001,
+    "steps (rolling avg)": 52.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 498,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.86,
+    "steps (rolling avg)": 52.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 499,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.8560000000001,
+    "steps (rolling avg)": 52.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 500,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.8560000000001,
+    "steps (rolling avg)": 52.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 501,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.8560000000001,
+    "steps (rolling avg)": 52.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 502,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1419999999999,
+    "steps (rolling avg)": 49.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 503,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1419999999999,
+    "steps (rolling avg)": 49.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 504,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1419999999999,
+    "steps (rolling avg)": 49.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 505,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1419999999999,
+    "steps (rolling avg)": 49.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 506,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1419999999999,
+    "steps (rolling avg)": 49.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 507,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1460000000001,
+    "steps (rolling avg)": 49.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 508,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1460000000001,
+    "steps (rolling avg)": 49.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 509,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1460000000001,
+    "steps (rolling avg)": 49.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 510,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1460000000001,
+    "steps (rolling avg)": 49.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 511,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1460000000001,
+    "steps (rolling avg)": 49.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 512,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1460000000001,
+    "steps (rolling avg)": 49.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 513,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1460000000001,
+    "steps (rolling avg)": 49.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 514,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1460000000001,
+    "steps (rolling avg)": 49.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 515,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1420000000002,
+    "steps (rolling avg)": 49.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 516,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1420000000002,
+    "steps (rolling avg)": 49.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 517,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1419999999999,
+    "steps (rolling avg)": 49.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 518,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.1420000000002,
+    "steps (rolling avg)": 49.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 519,
+    "cumulative_reward": 933.9999999999994,
+    "steps": 661.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0140000000001,
+    "steps (rolling avg)": 50.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 520,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0140000000001,
+    "steps (rolling avg)": 50.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 521,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0139999999999,
+    "steps (rolling avg)": 50.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 522,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0139999999999,
+    "steps (rolling avg)": 50.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 523,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0179999999999,
+    "steps (rolling avg)": 50.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 524,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.018,
+    "steps (rolling avg)": 50.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 525,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0139999999999,
+    "steps (rolling avg)": 50.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 526,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0139999999999,
+    "steps (rolling avg)": 50.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 527,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0139999999999,
+    "steps (rolling avg)": 50.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 528,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0139999999999,
+    "steps (rolling avg)": 50.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 529,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.01,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 530,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.01,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 531,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.01,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 532,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.01,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 533,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.01,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 534,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.01,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 535,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.0100000000001,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 536,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.01,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 537,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.01,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 538,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.01,
+    "steps (rolling avg)": 50.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 539,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.798,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 540,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.7979999999999,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 541,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.798,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 542,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.798,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 543,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.798,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 544,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.7979999999999,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 545,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.798,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 546,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.798,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 547,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.798,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 548,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.7979999999999,
+    "steps (rolling avg)": 33.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 549,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.802,
+    "steps (rolling avg)": 32.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 550,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 996.802,
+    "steps (rolling avg)": 32.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 551,
+    "cumulative_reward": 928.2999999999998,
+    "steps": 718.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4060000000001,
+    "steps (rolling avg)": 46.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 552,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4060000000001,
+    "steps (rolling avg)": 46.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 553,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.406,
+    "steps (rolling avg)": 46.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 554,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.406,
+    "steps (rolling avg)": 46.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 555,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4019999999999,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 556,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4020000000002,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 557,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4019999999998,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 558,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4019999999998,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 559,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4019999999998,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 560,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4019999999998,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 561,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4019999999998,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 562,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4019999999998,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 563,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4019999999998,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 564,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.4019999999998,
+    "steps (rolling avg)": 46.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 565,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.406,
+    "steps (rolling avg)": 46.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 566,
+    "cumulative_reward": 953.3999999999996,
+    "steps": 467.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.512,
+    "steps (rolling avg)": 55.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 567,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.512,
+    "steps (rolling avg)": 55.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 568,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.5119999999998,
+    "steps (rolling avg)": 55.88,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 569,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.794,
+    "steps (rolling avg)": 43.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 570,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.794,
+    "steps (rolling avg)": 43.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 571,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.794,
+    "steps (rolling avg)": 43.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 572,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.794,
+    "steps (rolling avg)": 43.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 573,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.794,
+    "steps (rolling avg)": 43.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 574,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.794,
+    "steps (rolling avg)": 43.06,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 575,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.7979999999999,
+    "steps (rolling avg)": 43.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 576,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.7979999999999,
+    "steps (rolling avg)": 43.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 577,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.7979999999999,
+    "steps (rolling avg)": 43.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 578,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.7979999999999,
+    "steps (rolling avg)": 43.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 579,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.802,
+    "steps (rolling avg)": 42.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 580,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.802,
+    "steps (rolling avg)": 42.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 581,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.802,
+    "steps (rolling avg)": 42.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 582,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.802,
+    "steps (rolling avg)": 42.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 583,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.802,
+    "steps (rolling avg)": 42.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 584,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.8020000000001,
+    "steps (rolling avg)": 42.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 585,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.7980000000002,
+    "steps (rolling avg)": 43.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 586,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.798,
+    "steps (rolling avg)": 43.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 587,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.7979999999999,
+    "steps (rolling avg)": 43.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 588,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.7979999999999,
+    "steps (rolling avg)": 43.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 589,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 995.7979999999999,
+    "steps (rolling avg)": 43.02,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 590,
+    "cumulative_reward": 791.2000000000075,
+    "steps": 2089.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.66,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 591,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.66,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 592,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.66,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 593,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.66,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 594,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.6600000000002,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 595,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.66,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 596,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.66,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 597,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.6600000000002,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 598,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.6600000000002,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 599,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.66,
+    "steps (rolling avg)": 84.4,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 600,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 991.6560000000001,
+    "steps (rolling avg)": 84.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 601,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.0520000000002,
+    "steps (rolling avg)": 70.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 602,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.0520000000001,
+    "steps (rolling avg)": 70.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 603,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.0520000000001,
+    "steps (rolling avg)": 70.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 604,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.0520000000001,
+    "steps (rolling avg)": 70.48,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 605,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.0560000000002,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 606,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.056,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 607,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.056,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 608,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.056,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 609,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.0560000000002,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 610,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.056,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 611,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.056,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 612,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.056,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 613,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.0560000000002,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 614,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.056,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 615,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.056,
+    "steps (rolling avg)": 70.44,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 616,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.95,
+    "steps (rolling avg)": 61.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 617,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.9500000000002,
+    "steps (rolling avg)": 61.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 618,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 993.9500000000002,
+    "steps (rolling avg)": 61.5,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 619,
+    "cumulative_reward": 781.3000000000081,
+    "steps": 2188.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.6140000000004,
+    "steps (rolling avg)": 104.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 620,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.6140000000004,
+    "steps (rolling avg)": 104.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 621,
+    "cumulative_reward": 996.1,
+    "steps": 40.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 622,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 623,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 624,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000004,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 625,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 626,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 627,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 628,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000004,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 629,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 630,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 631,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 632,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000004,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 633,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5740000000002,
+    "steps (rolling avg)": 105.26,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 634,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5780000000003,
+    "steps (rolling avg)": 105.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 635,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 989.5820000000004,
+    "steps (rolling avg)": 105.18,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 636,
+    "cumulative_reward": 958.1999999999997,
+    "steps": 419.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 988.7840000000003,
+    "steps (rolling avg)": 113.16,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 637,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 988.7840000000002,
+    "steps (rolling avg)": 113.16,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 638,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 988.7840000000003,
+    "steps (rolling avg)": 113.16,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 639,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 988.7840000000002,
+    "steps (rolling avg)": 113.16,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 640,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 641,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 642,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 643,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 644,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 645,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 646,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 647,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 648,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 649,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 650,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.926,
+    "steps (rolling avg)": 71.74,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 651,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.926,
+    "steps (rolling avg)": 71.74,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 652,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9220000000001,
+    "steps (rolling avg)": 71.78,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 653,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9180000000001,
+    "steps (rolling avg)": 71.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 654,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9180000000001,
+    "steps (rolling avg)": 71.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 655,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9180000000001,
+    "steps (rolling avg)": 71.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 656,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9180000000001,
+    "steps (rolling avg)": 71.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 657,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9180000000001,
+    "steps (rolling avg)": 71.82,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 658,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9140000000002,
+    "steps (rolling avg)": 71.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 659,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9060000000002,
+    "steps (rolling avg)": 71.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 660,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9060000000002,
+    "steps (rolling avg)": 71.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 661,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9060000000001,
+    "steps (rolling avg)": 71.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 662,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9060000000001,
+    "steps (rolling avg)": 71.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 663,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9060000000001,
+    "steps (rolling avg)": 71.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 664,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9060000000001,
+    "steps (rolling avg)": 71.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 665,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9060000000001,
+    "steps (rolling avg)": 71.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 666,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9060000000001,
+    "steps (rolling avg)": 71.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 667,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9020000000002,
+    "steps (rolling avg)": 71.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 668,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 992.9020000000002,
+    "steps (rolling avg)": 71.98,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 669,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.238,
+    "steps (rolling avg)": 28.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 670,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.2379999999998,
+    "steps (rolling avg)": 28.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 671,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.278,
+    "steps (rolling avg)": 28.22,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 672,
+    "cumulative_reward": 1000.0,
+    "steps": 1.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.3159999999999,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 673,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.316,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 674,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.3159999999999,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 675,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.316,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 676,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.3159999999999,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 677,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.316,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 678,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.3159999999999,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 679,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.316,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 680,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.3159999999999,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 681,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.316,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 682,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.3159999999999,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 683,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.316,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 684,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.3159999999999,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 685,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 997.316,
+    "steps (rolling avg)": 27.84,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 686,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.1139999999999,
+    "steps (rolling avg)": 19.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 687,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.114,
+    "steps (rolling avg)": 19.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 688,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.1139999999999,
+    "steps (rolling avg)": 19.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 689,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.1139999999999,
+    "steps (rolling avg)": 19.86,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 690,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.11,
+    "steps (rolling avg)": 19.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 691,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.1100000000001,
+    "steps (rolling avg)": 19.9,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 692,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.1060000000001,
+    "steps (rolling avg)": 19.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 693,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.1060000000001,
+    "steps (rolling avg)": 19.94,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 694,
+    "cumulative_reward": 841.6000000000047,
+    "steps": 1585.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9760000000002,
+    "steps (rolling avg)": 51.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 695,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9760000000002,
+    "steps (rolling avg)": 51.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 696,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9760000000001,
+    "steps (rolling avg)": 51.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 697,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9760000000001,
+    "steps (rolling avg)": 51.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 698,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9760000000001,
+    "steps (rolling avg)": 51.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 699,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9760000000001,
+    "steps (rolling avg)": 51.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 700,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9760000000001,
+    "steps (rolling avg)": 51.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 701,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9760000000001,
+    "steps (rolling avg)": 51.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 702,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 703,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 704,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9800000000001,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 705,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 706,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 707,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 708,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9800000000001,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 709,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9880000000002,
+    "steps (rolling avg)": 51.12,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 710,
+    "cumulative_reward": 997.7,
+    "steps": 24.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 711,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 712,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9800000000001,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 713,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 714,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 715,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 716,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9800000000001,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 717,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 718,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9800000000001,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 719,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 720,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 721,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.98,
+    "steps (rolling avg)": 51.2,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 722,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9420000000001,
+    "steps (rolling avg)": 51.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 723,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9420000000001,
+    "steps (rolling avg)": 51.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 724,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9380000000002,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 725,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9380000000002,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 726,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.938,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 727,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9380000000002,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 728,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.938,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 729,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9380000000002,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 730,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.938,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 731,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9380000000002,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 732,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.938,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 733,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9380000000002,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 734,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.938,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 735,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9380000000002,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 736,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.938,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 737,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9380000000002,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 738,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.938,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 739,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9380000000002,
+    "steps (rolling avg)": 51.62,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 740,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9420000000001,
+    "steps (rolling avg)": 51.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 741,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.9420000000001,
+    "steps (rolling avg)": 51.58,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 742,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.946,
+    "steps (rolling avg)": 51.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 743,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 994.946,
+    "steps (rolling avg)": 51.54,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 744,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.076,
+    "steps (rolling avg)": 20.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 745,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.076,
+    "steps (rolling avg)": 20.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 746,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.076,
+    "steps (rolling avg)": 20.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 747,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.076,
+    "steps (rolling avg)": 20.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 748,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.076,
+    "steps (rolling avg)": 20.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 749,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.0720000000001,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 750,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.0680000000002,
+    "steps (rolling avg)": 20.32,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 751,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.0680000000002,
+    "steps (rolling avg)": 20.32,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 752,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.0679999999999,
+    "steps (rolling avg)": 20.32,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 753,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.072,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 754,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.072,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 755,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.0720000000001,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 756,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.072,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 757,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.068,
+    "steps (rolling avg)": 20.32,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 758,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.0720000000001,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 759,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.072,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 760,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.076,
+    "steps (rolling avg)": 20.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 761,
+    "cumulative_reward": 997.9,
+    "steps": 22.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.0720000000001,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 762,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.0720000000001,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 763,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.0719999999998,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 764,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.072,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 765,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.072,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 766,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.072,
+    "steps (rolling avg)": 20.28,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 767,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.076,
+    "steps (rolling avg)": 20.24,
+    "success ratio": 1.0
+  },
+  {
+    "episode": 768,
+    "cumulative_reward": 998.1,
+    "steps": 20.0,
+    "epsilon": 0.01,
+    "reward (rolling avg)": 998.076,
+    "steps (rolling avg)": 20.24,
+    "success ratio": 1.0
+  }
+]
