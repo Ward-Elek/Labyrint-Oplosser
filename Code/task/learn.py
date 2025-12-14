@@ -35,13 +35,13 @@ class Agent:
         self.q_snapshots = []
 
     def set_rewards(self, maze, feasibility):
-        # Find the penultimate cell to set the highest reward for reaching the end of the maze:
-        previous = find_reachable_neighbors(maze, maze.maze_grid[maze.end[0]][maze.end[1]])[0]
-        prev_index = np.where(maze.maze_grid == previous)
-        previous = feasibility.numbered_grid[prev_index[0], prev_index[1]][0]
+        goal_cell = maze.maze_grid[maze.end[0]][maze.end[1]]
+        reachable_neighbors = find_reachable_neighbors(maze, goal_cell)
         self.R = np.where(self.R == 1, -0.1, self.R)
         # Set the highest reward for reaching the end of the maze:
-        self.R[previous, self.goal] = 1000.0
+        for neighbor in reachable_neighbors:
+            neighbor_idx = feasibility.numbered_grid[neighbor.x, neighbor.y]
+            self.R[neighbor_idx, self.goal] = 1000.0
 
     def train(
         self,
