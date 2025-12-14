@@ -179,7 +179,7 @@ class Agent:
 
             epsilon = max(min_epsilon, epsilon * epsilon_decay)
 
-    def walk(self, maze, feasibility, max_walk_steps=50):
+    def walk(self, maze, feasibility, max_walk_steps=200):
         # Walk to the goal from start using Q matrix.
         curr = self.start
         self.path.append(curr)
