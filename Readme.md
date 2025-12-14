@@ -24,9 +24,33 @@ Dit project onderzoekt hoe een AI een labyrint kan oplossen met behulp van Pytho
 
 Zorg dat je een recente versie van Python 3 geïnstalleerd hebt.
 
-## Gebruik
+## Gebruik / Quickstart
 
- Hier nog iets toevoegen !
+1. Zorg dat de dependencies geïnstalleerd zijn (`pip install -r requirements.txt`).
+2. Start een van de onderstaande scripts vanuit de projectroot:
+
+   - **Laatste getrainde agent draaien**:
+     ```bash
+     python Code/task/final_run.py
+     ```
+     Dit opent een Pygame-venster waarin de agent een labyrint probeert op te lossen. Je ziet de animatie van het pad en eventuele statusmeldingen in de terminal.
+
+   - **Live training uitvoeren**:
+     ```bash
+     python Code/task/live_training.py
+     ```
+     Start de trainingslus met visualisatie. Je krijgt een Pygame-venster met de actuele positie van de agent, plus trainingsstatistieken in de console.
+
+   - **Labyrint-generatie of alternatieve run**:
+     ```bash
+     python Code/task/main.py
+     ```
+     Voert de standaardlogica uit voor het genereren en oplossen van een labyrint. Ook hier verschijnt een Pygame-venster met de doolhofvisualisatie.
+
+### Vereisten voor lokale uitvoering
+
+- Een werkende Pygame-vensteromgeving (bijv. macOS/Windows of Linux met een display/server). In headless omgevingen moet je een virtuele display gebruiken (zoals Xvfb) om de vensters te tonen.
+- Python 3 en de pakketten uit `requirements.txt`.
 
 
 ## Doel en aanpak
