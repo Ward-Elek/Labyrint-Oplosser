@@ -86,8 +86,11 @@ De software draait lokaal op een standaardcomputer zonder specifieke hardwarever
 ---
 
 ## 4. Resultaat
+Auteur : Jarno
 
-
+Ons programma lost de geteste labyrinten consequent correct op en vindt in alle gevallen een geldig pad van start naar eindpunt, zolang er effectief een oplossing bestaat. Wanneer er geen uitweg is, wordt dit duidelijk aangegeven aan de gebruiker zodat er geen verwarring ontstaat en het verschil tussen “geen oplossing” en “nog aan het zoeken” helder blijft.
+Tijdens de testen hebben we het algoritme toegepast op een reeks labyrinten met verschillende groottes en complexiteit, waarbij de oplostijd voor kleine tot middelgrote labyrinten verwaarloosbaar klein bleef en pas merkbaar toenam bij grotere, sterk vertakte structuren. Gemiddeld komt de gevonden route overeen met de kortste of bijna kortste mogelijke weg, wat aantoont dat de gekozen zoekstrategie niet alleen betrouwbaar maar ook efficiënt is in termen van padlengte en rekentijd.
+Daarnaast blijkt uit de testen dat het programma stabiel blijft werken bij herhaald uitvoeren en dat het resultaat visueel duidelijk gepresenteerd wordt, zodat de gebruiker stap voor stap kan volgen welk pad de AI kiest. Dit bevestigt dat de implementatie geschikt is als basis om later extra functionaliteit toe te voegen, zoals het vergelijken van meerdere algoritmes of het analyseren van prestaties op nog grotere of dynamische labyrinten.
 
 ---
 
