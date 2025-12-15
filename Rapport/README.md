@@ -42,8 +42,7 @@ Het hoofddoel is een AI‑oplossing te ontwikkelen die zelfstandig uiteenlopende
 
 ### 1.2 Subdoelstellingen
 
-- Implementeren van meerdere pathfinding‑algoritmen (A\*, BFS, DFS, Dijkstra) om de sterke en zwakke punten in verschillende soorten labyrinten te vergelijken. 
-- Visualiseren van het labyrint, bezochte knopen en het uiteindelijke pad om het zoekproces stap voor stap inzichtelijk te maken.
+- Implementeren van reinforcement learning met Q-learning om de agent zelfstandig te laten leren navigeren door verschillende soorten labyrinten.- Visualiseren van het labyrint, bezochte knopen en het uiteindelijke pad om het zoekproces stap voor stap inzichtelijk te maken.
 - Optimaliseren van prestaties (snelheid, geheugengebruik) via geschikte datastructuren zoals queues, stacks en priority queues.
 - Vergelijken van algoritmen op basis van padlengte, rekentijd en aantal bezochte knopen, met resultaten in tabellen of grafieken.
 - Valideren op uiteenlopende labyrint‑complexiteiten, van eenvoudige grids tot grotere sterk vertakte doolhoven, om robuustheid en generaliseerbaarheid aan te tonen.
@@ -99,10 +98,8 @@ Een demonstratie van het resultaat is te zien in deze [video](/Media) , je zal w
 
 Auteur: Jarno
 
-De oorspronkelijke doelstelling om een intelligente oplossing te bouwen die labyrinten efficiënt kan analyseren, doorlopen en een (bij voorkeur optimaal) pad kan bepalen met verschillende pathfinding‑algoritmen is in grote mate bereikt. De implementatie van A\*, BFS, DFS en Dijkstra, gecombineerd met visualisatie en prestatieanalyse, sluit goed aan bij de vooropgestelde subdoelstellingen. 
-
-Binnen de context van klassieke AI‑algoritmen biedt het resultaat een geldige en bruikbare oplossing voor het efficiënt bepalen van een weg door complexe labyrinten. Tests met labyrinten van verschillende complexiteit tonen dat vooral A\* een goede balans biedt tussen snelheid en kwaliteit van het gevonden pad, terwijl de andere algoritmen nuttige referenties vormen.
-
+De oorspronkelijke doelstelling om een intelligente oplossing te bouwen die labyrinten efficiënt kan analyseren, doorlopen en een (bij voorkeur optimaal) pad kan bepalen met reinforcement learning is in grote mate bereikt. De implementatie van Q-learning, gecombineerd met visualisatie en prestatieanalyse, sluit goed aan bij de vooropgestelde subdoelstellingen.
+Binnen de context van reinforcement learning biedt het resultaat een geldige en bruikbare oplossing voor het efficiënt bepalen van een weg door complexe labyrinten. Tests met labyrinten van verschillende complexiteit tonen dat Q-learning goed presteert door te leren uit ervaring en iteratief het beleid te verbeteren.
 ---
 
 ## 6. Uitbreiding
@@ -139,8 +136,7 @@ Ten slotte kunnen statistieken zoals beloningscurves, heatmaps van bezochte veld
 
 - PuppyGraph. (2025). *DFS vs BFS: A guide for deep understanding*. 
 
-- *Research of the Path Finding Algorithm A\* in Video Games*. HSET Journal. 
-
+- Watkins, C. J., & Dayan, P. (1992). *Q-learning*. Machine learning, 8(3), 279-292.
 - Russell, S., & Norvig, P. (2010). *Artificial Intelligence: A Modern Approach* (3e ed.). Prentice Hall.
 - Wikipedia. *Pathfinding*. 
 
