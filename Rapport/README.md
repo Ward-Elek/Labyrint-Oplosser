@@ -90,7 +90,8 @@ Ons programma lost de geteste labyrinten consequent correct op en vindt in alle 
 Tijdens de testen hebben we het algoritme toegepast op een reeks labyrinten met verschillende groottes en complexiteit, waarbij de oplostijd voor kleine tot middelgrote labyrinten verwaarloosbaar klein bleef en pas merkbaar toenam bij grotere, sterk vertakte structuren. Gemiddeld komt de gevonden route overeen met de kortste of bijna kortste mogelijke weg, wat aantoont dat de gekozen zoekstrategie niet alleen betrouwbaar maar ook efficiënt is in termen van padlengte en rekentijd.
 Daarnaast blijkt uit de testen dat het programma stabiel blijft werken bij herhaald uitvoeren en dat het resultaat visueel duidelijk gepresenteerd wordt, zodat de gebruiker stap voor stap kan volgen welk pad de AI kiest. Dit bevestigt dat de implementatie geschikt is als basis om later extra functionaliteit toe te voegen, zoals het vergelijken van meerdere algoritmes of het analyseren van prestaties op nog grotere of dynamische labyrinten.
 
-Een demonstratie van het resultaat is te zien in deze [video](/Media/Voorbeeld.mp4).
+Een demonstratie van het resultaat is te zien in deze [video](/Media) , je zal wel de video moeten downloaden voor het te kunnen bekijken.
+
 
 ---
 
