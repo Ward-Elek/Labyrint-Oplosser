@@ -4,8 +4,6 @@
 **Docent:** Franky Loret  
 **Academiejaar:** 2025‑2026
 
-Dit project onderzoekt hoe een kunstmatige intelligentie zelfstandig een labyrint kan oplossen en visualiseren, met een in Python geïmplementeerde agent en een Pygame‑omgeving die het doolhof en het zoekproces in real time weergeeft. Klassieke pathfinding‑algoritmen (A\*, BFS, DFS, Dijkstra) worden toegepast om paden te vinden en hun prestaties te analyseren in uiteenlopende labyrinten.
-
 ---
 
 ## Inhoud
