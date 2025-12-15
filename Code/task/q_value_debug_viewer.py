@@ -1,5 +1,7 @@
 """Debug viewer that overlays learned Q-values on the maze grid."""
 
+import threading
+
 import numpy as np
 import pygame
 from PIL import Image, ImageDraw, ImageFont
@@ -12,7 +14,7 @@ from maze import Maze
 
 
 class QValueDebugViewer:
-    """Render a static maze annotated with per-cell Q-values."""
+    """Render a maze annotated with live-updating per-cell Q-values."""
 
     def __init__(self, maze, feasibility, agent, title: str = "Q-value debug viewer"):
         self.maze = maze
@@ -21,6 +23,7 @@ class QValueDebugViewer:
         self.title = title
         self.screen = None
         self.background = None
+        self.base_image = None
         self.clock = None
         self.zoom = 1.0
         self.min_zoom = 0.1
@@ -42,13 +45,19 @@ class QValueDebugViewer:
         self.screen = pygame.display.set_mode((self.base_width, self.base_height))
         pygame.display.set_caption(self.title)
         self.clock = pygame.time.Clock()
-        self.background = self._render_background()
+        self.base_image = self._render_base_image()
+        self.background = self._compose_frame()
 
-    def _render_background(self):
+    def _render_base_image(self):
         img = Image.new("RGB", (self.base_width, self.base_height), (255, 255, 255))
         drawer = ImageDraw.Draw(img)
         draw_image(drawer, self.maze.maze_grid)
         self._highlight_start_and_end(drawer)
+        return img
+
+    def _compose_frame(self):
+        img = self.base_image.copy()
+        drawer = ImageDraw.Draw(img)
         self._annotate_q_values(drawer)
         return pygame.image.fromstring(img.tobytes(), img.size, img.mode)
 
@@ -100,7 +109,7 @@ class QValueDebugViewer:
             value = float(np.max(filtered)) if filtered.size else 0.0
             label = f"{value:.1f}"
             try:
-                font = ImageFont.truetype("Arial Unicode.ttf", 18)
+                font = ImageFont.truetype("Arial Unicode.ttf", 24)
             except OSError:
                 font = ImageFont.load_default()
             text_box = drawer.textbbox((0, 0), label, font=font)
@@ -132,7 +141,7 @@ class QValueDebugViewer:
     def _change_zoom(self, delta):
         self.zoom = min(self.max_zoom, max(self.min_zoom, self.zoom + delta))
 
-    def run(self, fps: int = 30):
+    def run(self, fps: int = 30, completion_event: threading.Event | None = None):
         running = True
         while running:
             for event in pygame.event.get():
@@ -146,15 +155,21 @@ class QValueDebugViewer:
                     elif event.key in (pygame.K_MINUS, pygame.K_KP_MINUS):
                         self._change_zoom(-0.1)
 
+            # Recompose the frame so Q-values update live as training progresses.
+            self.background = self._compose_frame()
+
             self._blit_scaled_surface()
             pygame.display.flip()
             self.clock.tick(fps)
 
+            if completion_event and completion_event.is_set():
+                running = False
+
         pygame.quit()
 
 
-def train_agent_with_inputs():
-    """Train an agent using interactive prompts and return it with the maze."""
+def train_agent_with_inputs(train_immediately: bool = True):
+    """Configure an agent from user input and optionally start training."""
 
     dimensions = prompt_for_value(
         "Enter maze dimensions separated by a space (e.g. 4 4): ",
@@ -191,19 +206,39 @@ def train_agent_with_inputs():
     maze = Maze(dimension1, dimension2, [start_x, start_y])
     feasibility = Feasibility(maze)
     agent = Agent(feasibility, gamma, lrn_rate, maze, start_x, start_y)
-    agent.train(
-        feasibility.F_matrix,
-        max_epochs,
-        record_episodes=False,
-        record_q_values=False,
-    )
-    return maze, feasibility, agent
+
+    if train_immediately:
+        agent.train(
+            feasibility.F_matrix,
+            max_epochs,
+            record_episodes=False,
+            record_q_values=False,
+        )
+        return maze, feasibility, agent
+
+    return maze, feasibility, agent, max_epochs
 
 
 def main():
-    maze, feasibility, agent = train_agent_with_inputs()
+    maze, feasibility, agent, max_epochs = train_agent_with_inputs(train_immediately=False)
     viewer = QValueDebugViewer(maze, feasibility, agent)
-    viewer.run()
+
+    training_done = threading.Event()
+
+    def training_task():
+        agent.train(
+            feasibility.F_matrix,
+            max_epochs,
+            record_episodes=False,
+            record_q_values=False,
+        )
+        training_done.set()
+
+    training_thread = threading.Thread(target=training_task, daemon=True)
+    training_thread.start()
+
+    viewer.run(completion_event=training_done)
+    training_thread.join()
 
 
 if __name__ == "__main__":
