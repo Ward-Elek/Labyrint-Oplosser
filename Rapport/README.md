@@ -120,7 +120,7 @@ Ten slotte kunnen statistieken zoals beloningscurves, heatmaps van bezochte veld
 
 - **Geal:** “Ik heb niet echt een interesse in software of AI‑learning, maar dit project heeft me wel bijgeleerd hoe algoritmes op verschillende manieren gebruikt kunnen worden. Ik wist bijvoorbeeld niet dat een DFS‑algoritme kon worden ingezet om een maze te genereren.” 
 
-- **Ward:** 
+- **Ward:** “Ondanks dat ik niet echt zo zeer een software-mens ben, vond ik dit project toch wel heel interessant. Artificiële Intelligentie is toch wel veel complexxer dan ik dacht, zeker toen ik bezig was met het in het geheel in een powerpoint gieten. Het was vermoeiend maar zeer leerzaam!”
 
 
 
